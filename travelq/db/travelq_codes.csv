@@ -1,0 +1,355 @@
+id,code_id,field_id,label_en,label_fr,field_id__search_id,field_id__field_id
+1,MPSES,2,Minister/Ministerial adviser/Ministerial staff/Parliamentary Secretary/Exempt Staff,Ministre/Conseiller ministériel/Personnel ministériel/Secrétaire parlementaires/Personnel exonéré,travelq,disclosure_group
+2,SLE,2,Senior officer or employee,Cadre supérieur ou employé,travelq,disclosure_group
+3,P01,21,April,avril,travelq,month
+4,P02,21,May,mai,travelq,month
+5,P03,21,June,juin,travelq,month
+6,P04,21,July,juillet,travelq,month
+7,P05,21,August,août,travelq,month
+8,P06,21,September,septembre,travelq,month
+9,P07,21,October,octobre,travelq,month
+10,P08,21,November,novembre,travelq,month
+11,P09,21,December,décembre,travelq,month
+12,P10,21,January,janvier,travelq,month
+13,P11,21,February,février,travelq,month
+14,P12,21,March,mars,travelq,month
+15,2canl,22,2875039 Canada Limited,2875039 Canada Limited,travelq,owner_org
+16,3can,22,3906949 Canada Inc.,3906949 Canada Inc.,travelq,owner_org
+17,3nih,22,3Net Indy Holdings,3Net Indy Holdings,travelq,owner_org
+18,3nii,22,3Net Indy Investments Inc.,3Net Indy Investments Inc.,travelq,owner_org
+19,7can,22,7986386 Canada Inc.,7986386 Canada Inc.,travelq,owner_org
+20,8can,22,8599963 Canada Inc.,8599963 Canada Inc.,travelq,owner_org
+21,aac,22,AviAlliance Canada Inc.,AviAlliance Canada Inc.,travelq,owner_org
+22,aafc-aac,22,Agriculture and Agri-Food Canada,Agriculture et Agroalimentaire Canada,travelq,owner_org
+23,aandc-aadnc,22,Crown-Indigenous Relations and Northern Affairs Canada,Relations Couronne-Autochtones et Affaires du Nord Canada,travelq,owner_org
+24,acoa-apeca,22,Atlantic Canada Opportunities Agency,Agence de promotion économique du Canada atlantique,travelq,owner_org
+25,aecl-eacl,22,Atomic Energy of Canada Limited,"Énergie atomique du Canada, Limitée",travelq,owner_org
+26,ahrc-pac,22,Assisted Human Reproduction Canada,Procréation Assistée Canada,travelq,owner_org
+27,apa,22,Atlantic Pilotage Authority Canada,Administration de pilotage de l'Atlantique Canada,travelq,owner_org
+28,apfc-fapc,22,Asia-Pacific Foundation of Canada,Fondation Asie Pacifique du Canada,travelq,owner_org
+29,api,22,Argentia Private Investments Inc.,Argentia Private Investments Inc.,travelq,owner_org
+30,atm,22,AviAlliance Terminal Management Inc.,AviAlliance Terminal Management Inc.,travelq,owner_org
+31,atssc-scdata,22,Administrative Tribunals Support Service of Canada,Service canadien d'appui aux tribunaux administratifs,travelq,owner_org
+32,bbpi,22,Belle Bay Private Investments Inc.,Belle Bay Private Investments Inc.,travelq,owner_org
+33,bc,22,Bank of Canada,Banque du Canada,travelq,owner_org
+34,bc-cb,22,Government of British Columbia,Gouvernment de la Colombie-Britannique,travelq,owner_org
+35,bci,22,BDC Capital Inc.,BDC Capital Inc.,travelq,owner_org
+36,bctc-ctcb,22,British Columbia Treaty Commission,Commission des Traités de la Colombie-Britannique,travelq,owner_org
+37,bdc,22,Business Development Bank of Canada,Banque de développement du Canada,travelq,owner_org
+38,bgpi,22,Blue & Gold Private Investments Inc.,Blue & Gold Private Investments Inc.,travelq,owner_org
+39,bwbc-pbwc,22,Blue Water Bridge Canada,Pont Blue Water Canada,travelq,owner_org
+40,caf-facdnd,22,Canadian Forces,Forces canadiennes,travelq,owner_org
+41,cannor,22,Canadian Northern Economic Development Agency,Agence canadienne de développement économique du Nord,travelq,owner_org
+42,capprt-tcrpap,22,Canadian Artists and Producers Professional Relations Tribunal,Tribunal canadien des relations professionnelles artistes-producteurs,travelq,owner_org
+43,cart-crac,22,Canada Agricultural Review Tribunal,Commission de révision agricole du Canada,travelq,owner_org
+44,casdo-ocena,22,Accessibility Standards Canada,Normes d’accessibilité Canada,travelq,owner_org
+45,cas-satj,22,Courts Administration Service,Service administratif des tribunaux judiciaires,travelq,owner_org
+46,catsa-acsta,22,Canadian Air Transport Security Authority,Administration canadienne de la sûreté du transport aérien,travelq,owner_org
+47,cb-cda,22,Copyright Board Canada,Commission du droit d'auteur du Canada,travelq,owner_org
+48,cbc-radio-canada,22,Canadian Broadcasting Company,Radio-Canada,travelq,owner_org
+49,cbsa-asfc,22,Canada Border Services Agency,Agence des services frontaliers du Canada,travelq,owner_org
+50,cca-cac,22,Canada Council for the Arts,Conseil des arts du Canada,travelq,owner_org
+51,ccc,22,Canadian Commercial Corporation,Corporation commerciale canadienne,travelq,owner_org
+52,ccohs-cchst,22,Canadian Centre for Occupational Health and Safety,Centre canadien d'hygiène et de sécurité au travail,travelq,owner_org
+53,ccperb-cceebc,22,Canadian Cultural Property Export Review Board,Commission canadienne d'examen des exportations de biens culturels,travelq,owner_org
+54,cdc-ccl,22,Canadian Dairy Commission,Commission canadienne du lait,travelq,owner_org
+55,cdev,22,Canada Development Investment Corporation,Corporation de développement des investissements du Canada,travelq,owner_org
+56,cdic-sadc,22,Canada Deposit Insurance Corporation,Société d'assurance-dépôts du Canada,travelq,owner_org
+57,ced-dec,22,Canada Economic Development for Quebec Regions,Développement économique Canada pour les régions du Québec,travelq,owner_org
+58,ceic-caec,22,Canada Employment Insurance Commission,Commission de l’assurance-emploi du Canada,travelq,owner_org
+59,ceifb-ofaec,22,Canada Employment Insurance Financing Board,Office de financement de l'assurance-emploi du Canada,travelq,owner_org
+60,celd,22,Canada Eldor Inc.,Canada Eldor Inc.,travelq,owner_org
+61,ceria-acire,22,Canada Emission Reduction Incentives Agency,Agence canadienne pour l'incitation à la réduction des émissions,travelq,owner_org
+62,cer-rec,22,Canada Energy Regulator,La Régie de l’énergie du Canada,travelq,owner_org
+63,cfia-acia,22,Canadian Food Inspection Agency,Agence canadienne d'inspection des aliments,travelq,owner_org
+64,cfmws-sbmfc,22,Canadian Forces Morale and Welfare Services,Services de bien-être et moral des Forces canadiennes,travelq,owner_org
+65,cgc-ccg,22,Canadian Grain Commission,Commission canadienne des grains,travelq,owner_org
+66,cgic-cgc,22,Canada GEN Investment Corporation,Corporation d'investissements GEN du Canada,travelq,owner_org
+67,cgsb-ongc,22,Canadian Government Specifications Board,Office des normes générales du Canada,travelq,owner_org
+68,chhc-sgch,22,Canada Hibernia Holding Corporation,Société de gestion Canada Hibernia,travelq,owner_org
+69,chrc-ccdp,22,Canadian Human Rights Commission,Commission canadienne des droits de la personne,travelq,owner_org
+70,chrt-tcdp,22,Human Rights Tribunal,Tribunal des droits de la personne,travelq,owner_org
+71,cht-fcpl,22,Canada Housing Trust,Fiducie du Canada pour l'habitation,travelq,owner_org
+72,cib-bic,22,Canada Infrastructure Bank,La Banque de l’infrastructure du Canada,travelq,owner_org
+73,cic,22,"Immigration, Refugees and Citizenship Canada","Immigration, Réfugiés et Citoyenneté Canada",travelq,owner_org
+74,cics-scic,22,Canadian Intergovernmental Conference Secretariat,Secrétariat des conférences intergouvernementales canadiennes,travelq,owner_org
+75,cihi-icis,22,Canadian Institute of Health Information,Institut canadien d'information sur la santé,travelq,owner_org
+76,cihr-irsc,22,Canadian Institutes of Health Research,Instituts de recherche en santé du Canada,travelq,owner_org
+77,cirb-ccri,22,Canada Industrial Relations Board,Conseil canadien des relations industrielles,travelq,owner_org
+78,citt-tcce,22,Canadian International Trade Tribunal,Tribunal canadien du commerce extérieur,travelq,owner_org
+79,clccl-siccl,22,Canada Lands Company CLC Limited,Société immobilière du Canada CLC limitée,travelq,owner_org
+80,clcl-sicl,22,Canada Lands Company Limited,Société immobilière du Canada Limitée,travelq,owner_org
+81,cmc-mcc,22,Canadian Museum of History,Musée canadien de l'histoire,travelq,owner_org
+82,cmhc-schl,22,Canada Mortgage and Housing Corporation,Société canadienne d'hypothèques et de logement,travelq,owner_org
+83,cmhr-mcdp,22,Canadian Museum for Human Rights,Musée canadien pour les droits de la personne,travelq,owner_org
+84,cmip-mciq,22,Canadian Museum of Immigration at Pier 21,Musée canadien de l'immigration du Quai 21,travelq,owner_org
+85,cmmgpi-sarpgm,22,Corporation for the Mitigation of Mackenzie Gas Project Impacts,Société d'atténuation des répercussions du projet gazier Mackenzie,travelq,owner_org
+86,cmn-mcn,22,Canadian Museum of Nature,Musée canadien de la nature,travelq,owner_org
+87,cnlopb,22,Canada-Newfoundland and Labrador Offshore Petroleum Board,Office Canada–Terre-Neuve-et Labrador des hydrocarbures extracôtiers,travelq,owner_org
+88,cnsc-ccsn,22,Canadian Nuclear Safety Commission,Commission canadienne de sûreté nucléaire,travelq,owner_org
+89,cnsopb,22,Canada-Nova Scotia Offshore-Petroleum Board,Office Canada-Nouvelle-Écosse des hydrocarbures extracôtiers,travelq,owner_org
+90,cpc-cpp,22,Civilian Review and Complaints Commission for the RCMP,Commission civile d'examen et de traitement des plaintes relatives à la Gendarmerie royale du Canada,travelq,owner_org
+91,cpc-scp,22,Canada Post,Postes Canada,travelq,owner_org
+92,cppib-oirpc,22,Canada Pension Plan Investment Board,L’Office d’investment du Régime de pensions du Canada,travelq,owner_org
+93,cra-arc,22,Canada Revenue Agency,Agence du revenu du Canada,travelq,owner_org
+94,crrf-fcrr,22,Canadian Race Relations Foundation,La Fondation Canadienne des relations raciales,travelq,owner_org
+95,crtc,22,Canadian Radio-television and Telecommunications Commission,Conseil de la radiodiffusion et des télécommunications canadiennes,travelq,owner_org
+96,csa-asc,22,Canadian Space Agency,Agence spatiale canadienne,travelq,owner_org
+97,csc-scc,22,Correctional Service of Canada,Service correctionnel du Canada,travelq,owner_org
+98,csec-cstc,22,Communications Security Establishment Canada,Centre de la sécurité des télécommunications Canada,travelq,owner_org
+99,csis-scrs,22,Canadian Security Intelligence Service,Service canadien du renseignement de sécurité,travelq,owner_org
+100,csps-efpc,22,Canada School of Public Service,École de la fonction publique du Canada,travelq,owner_org
+101,cstm-mstc,22,Canada Science and Technology Museum,Musée des sciences et de la technologie du Canada,travelq,owner_org
+102,cta-otc,22,Canadian Transportation Agency,Office des transports du Canada,travelq,owner_org
+103,ctc-cct,22,Destination Canada,Destination Canada,travelq,owner_org
+104,ct-tc,22,Competition Tribunal,Tribunal de la concurrence,travelq,owner_org
+105,dcc-cdc,22,Defence Construction Canada,Construction de Défense Canada,travelq,owner_org
+106,dfatd-maecd,22,Global Affairs Canada,Affaires mondiales Canada,travelq,owner_org
+107,dfo-mpo,22,Fisheries and Oceans Canada,Pêches et Océans Canada,travelq,owner_org
+108,dnd-mdn,22,National Defence,Défense nationale,travelq,owner_org
+109,dpi,22,Datura Private Investments Inc.,Datura Private Investments Inc.,travelq,owner_org
+110,dpm-vpm,22,Office of the Deputy Prime Minister,Vice-première ministre,travelq,owner_org
+111,drdc-rddc,22,Defence Research and Development Canada,Recherche et développement pour la Défense Canada,travelq,owner_org
+112,ec,22,Environment and Climate Change Canada,Environnement et Changement climatique Canada,travelq,owner_org
+113,ecbc-secb,22,Enterprise Cape Breton Corporation,Société d'expansion du Cap-Breton,travelq,owner_org
+114,edc,22,Export Development Canada,Exportation et développement Canada,travelq,owner_org
+115,elections,22,Elections Canada,Élections Canada,travelq,owner_org
+116,erc-cee,22,RCMP External Review Committee,Comité externe d'examen de la GRC,travelq,owner_org
+117,esab-orad,22,Energy Supplies Allocation Board,Office de répartition des approvisionnements d’énergie,travelq,owner_org
+118,esdc-edsc,22,Employment and Social Development Canada,Emploi et Développement social Canada,travelq,owner_org
+119,exi,22,Exinvest Inc.,Exinvest Inc.,travelq,owner_org
+120,external-externe,22,External User,Utilisateur externe,travelq,owner_org
+121,fbcl-spfl,22,Federal Bridge Corporation,Société des ponts fédéraux,travelq,owner_org
+122,fcac-acfc,22,Financial Consumer Agency of Canada,Agence de la consommation en matière financière du Canada,travelq,owner_org
+123,fcc-fac,22,Farm Credit Canada,Financement agricole Canada,travelq,owner_org
+124,feddevontario,22,Federal Economic Development Agency for Southern Ontario,Agence fédérale de développement économique pour le Sud de l'Ontario,travelq,owner_org
+125,ffmc-ocped,22,Freshwater Fish Marketing Corporation,Office de commercialisation du poisson d'eau douce,travelq,owner_org
+126,fin,22,Department of Finance Canada,Ministère des Finances Canada,travelq,owner_org
+127,fintrac-canafe,22,Financial Transactions and Reports Analysis Centre of Canada,Centre d'analyse des opérations et déclarations financières du Canada,travelq,owner_org
+128,fja-cmf,22,Office of the Commissioner for Federal Judicial Affairs Canada,Commissariat à la magistrature fédérale Canada,travelq,owner_org
+129,fnfmb-cgfpn,22,First Nations Financial Management Board,Conseil de gestion financière des premières nations,travelq,owner_org
+130,fnsi-ispn,22,First Nations Statistical Institute,Institut de la statistique des premières nations,travelq,owner_org
+131,fntc-cfpn,22,First Nations Tax Commission,Commission de la fiscalité des premières nations,travelq,owner_org
+132,fpcc-cpac,22,Farm Products Council of Canada,Conseil des produits agricoles du Canada,travelq,owner_org
+133,fpslreb-crtespf,22,Federal Public Sector Labour Relations and Employment Board,Commission des relations de travail et de l’emploi dans le secteur public fédéral,travelq,owner_org
+134,fraidg-ciafimd,22,Office of the Administrator of the Fund for Railway Accidents Involving Designated Goods,Caisse d’indemnisation pour les accidents ferroviaires impliquant des marchandises désignées,travelq,owner_org
+135,ghl-lgc,22,Office of the Leader of the Government in the House of Commons,Cabinet du Leader du gouvernement à la Chambre des communes,travelq,owner_org
+136,glpa-apgl,22,Great Lakes Pilotage Authority Canada,Administration de pilotage des Grands Lacs Canada,travelq,owner_org
+137,glupb-ogat,22,Gwich’in Land Use Planning Board,Office Gwich’in d’aménagement territorial,travelq,owner_org
+138,glwb-ogte,22,Gwich’in Land and Water Board,Office Gwich’in des terres et des eaux,travelq,owner_org
+139,gpi,22,Galvaude Private Investments Inc.,Galvaude Private Investments Inc.,travelq,owner_org
+140,halpa-aphal,22,Halifax Port Authority,Administration portuaire de Halifax,travelq,owner_org
+141,hampa-apham,22,Hamilton Port Authority,Administration portuaire de Hamilton,travelq,owner_org
+142,hc-sc,22,Health Canada,Santé Canada,travelq,owner_org
+143,hmirc-ccrmd,22,Hazardous Materials Information Review Commission Canada,Conseil de contrôle des renseignements relatifs aux matières dangereuses Canada,travelq,owner_org
+144,hoc-cdc,22,House of Commons,Chambre des communes,travelq,owner_org
+145,hrtc-tdpc,22,Human Rights Tribunal of Canada,Tribunal des droits de la personne du Canada,travelq,owner_org
+146,hsmbc-clmhc,22,Historic Sites and Monuments Board of Canada,Commission des lieux et monuments historiques du Canada,travelq,owner_org
+147,iaac-aeic,22,Impact Assessment Agency of Canada,Agence d'évaluation d'impact du Canada,travelq,owner_org
+148,ic,22,"Innovation, Science and Economic Development Canada","Innovation, Sciences et Développement économique Canada",travelq,owner_org
+149,idrc-crdi,22,International Development Research Centre,Centre de recherches pour le développement international,travelq,owner_org
+150,ihgp,22,Infra H20 GP Partners Inc.,Infra H20 GP Partners Inc.,travelq,owner_org
+151,ihlp,22,Infra H20 LP Partners Inc.,Infra H20 LP Partners Inc.,travelq,owner_org
+152,iinfra,22,Indo-Infra Inc.,Indo-Infra Inc.,travelq,owner_org
+153,ijc-cmi,22,International Joint Commission,Commission mixte internationale,travelq,owner_org
+154,infc,22,Infrastructure Canada,Infrastructure Canada,travelq,owner_org
+155,innovation,22,Canada Foundation for Innovation,Fondation canadienne pour l’innovation,travelq,owner_org
+156,ipcan,22,Infra-PSP Canada Inc.,Infra-PSP Canada Inc.,travelq,owner_org
+157,ipcred,22,Infra-PSP Credit Inc.,Infra-PSP Credit Inc.,travelq,owner_org
+158,ipe,22,Infra-PSP ECEF Inc.,Infra-PSP ECEF Inc.,travelq,owner_org
+159,ipi,22,Ivory Private Investments Inc.,Ivory Private Investments Inc.,travelq,owner_org
+160,ipp,22,Infra-PSP Partners Inc.,Infra-PSP Partners Inc.,travelq,owner_org
+161,irb-cisr,22,Immigration and Refugee Board of Canada,Commission de l'immigration et du statut de réfugié du Canada,travelq,owner_org
+162,irstrc-cvrrpi,22,Indian Residential Schools Truth and Reconciliation Commission,Commission de vérité et de réconciliation relative aux pensionnats indiens,travelq,owner_org
+163,isc-sac,22,Indigenous Services Canada,Services aux Autochtones Canada,travelq,owner_org
+164,iti,22,Infra TM Investments Inc.,Infra TM Investments Inc.,travelq,owner_org
+165,jccbi-pjcci,22,Jacques Cartier and Champlain Bridges Incorporated,Ponts Jacques Cartier et Champlain Incorporée,travelq,owner_org
+166,jus,22,Department of Justice Canada,Ministère de la Justice Canada,travelq,owner_org
+167,kipi,22,Kings Island Private Investments Inc.,Kings Island Private Investments Inc.,travelq,owner_org
+168,lac-bac,22,Library and Archives Canada,Bibliothèque et Archives Canada,travelq,owner_org
+169,lpa-apl,22,Laurentian Pilotage Authority Canada,Administration de pilotage des Laurentides Canada,travelq,owner_org
+170,lp-bp,22,Library of Parliament,Bibliothèque du Parlement,travelq,owner_org
+171,mai,22,Marine Atlantic Inc.,Marine Atlantique S.C.C.,travelq,owner_org
+172,mdi-mid,22,Office of the Minister of Democratic Institutions,Cabinet du Ministre des Institutions démocratiques,travelq,owner_org
+173,mgerc-ceegm,22,Military Grievances External Review Committee,Comité externe d’examen des griefs militaires,travelq,owner_org
+174,miga-maig,22,Office of the Minister of Intergovernmental and Northern Affairs and Internal Trade,Cabinet du Ministre des Affaires intergouvernementales et du Nord et du Commerce intérieur,travelq,owner_org
+175,mint-monnaie,22,Royal Canadian Mint,Monnaie royale canadienne,travelq,owner_org
+176,mlvwb-otevm,22,Mackenzie Valley Land and Water Board,Office des terres et des eaux de la vallée du Mackenzie Valley,travelq,owner_org
+177,mmiwg-ffada,22,National Inquiry into Missing and Murdered Indigenous Women and Girls,Enquête nationale sur les femmes et les filles autochtones disparues et assassinées,travelq,owner_org
+178,mpa-apm,22,Montreal Port Authority,Administration portuaire de Montréal,travelq,owner_org
+179,mpcc-cppm,22,Military Police Complaints Commission of Canada,Commission d'examen des plaintes concernant la police militaire du Canada,travelq,owner_org
+180,mveirb-oervm,22,Mackenzie Valley Environmental Impact Review Board,Office d’examen des répercussions environnementales de la vallée du Mackenzie,travelq,owner_org
+181,nac-cna,22,National Arts Centre,Centre national des Arts,travelq,owner_org
+182,nbc-ccbn,22,The National Battlefields Commission,Commission des champs de bataille nationaux,travelq,owner_org
+183,ncc-ccn,22,National Capital Commission,Commission de la capitale nationale,travelq,owner_org
+184,ndcfo-odnfc,22,National Defence and Canadian Forces Ombudsman,Ombudsman de la Défense nationale et des Forces canadiennes,travelq,owner_org
+185,nfb-onf,22,National Film Board,Office national du film,travelq,owner_org
+186,nfh,22,Northern Fjord Holdings Inc.,Northern Fjord Holdings Inc.,travelq,owner_org
+187,ngc-mbac,22,National Gallery of Canada,Musée des beaux-arts du Canada,travelq,owner_org
+188,nirb-cner,22,Nunavut Impact Review Board,La Commission du Nunavut chargée de l’examen des répercussions,travelq,owner_org
+189,nl-tnl,22,Government of Newfoundland and Labrador,Gouvernment de Terre-Neuve-et-Labrador,travelq,owner_org
+190,nnpa-apn,22,Nanaimo Port Authority,Administration portuaire de Nanaïmo,travelq,owner_org
+191,npa-apn,22,Northern Pipeline Agency Canada,Administration du pipe-line du Nord Canada,travelq,owner_org
+192,npc-can,22,Nunavut Planning Commission,Commission d’aménagement du Nunavut,travelq,owner_org
+193,nrcan-rncan,22,Natural Resources Canada,Ressources naturelles Canada,travelq,owner_org
+194,nrc-cnrc,22,National Research Council Canada,Conseil national de recherches Canada,travelq,owner_org
+195,nrtee-trnee,22,National Round Table on the Environment and the Economy,Table ronde nationale sur l'environnement et l'économie,travelq,owner_org
+196,nserc-crsng,22,Natural Sciences and Engineering Research Council of Canada,Conseil de recherches en sciences naturelles et en génie du Canada,travelq,owner_org
+197,nsira-ossnr,22,National Security and Intelligence Review Agency,Office de surveillance des activités en matière de sécurité nationale et de renseignement,travelq,owner_org
+198,ns-ne,22,Government of Nova Scotia,Gouvernment de la Nouvelle-Écosse,travelq,owner_org
+199,nsrt-tdsn,22,Nunavut Surface Rights Tribunal,Le Tribunal des droits de surface du Nunavut,travelq,owner_org
+200,nwb-oen,22,Nunavut Water Board,l’Office des Eaux du Nunavut,travelq,owner_org
+201,oag-bvg,22,Office of the Auditor General of Canada,Bureau du vérificateur général du Canada,travelq,owner_org
+202,oci-bec,22,The Correctional Investigator Canada,L'Enquêteur correctionnel Canada,travelq,owner_org
+203,ocl-cal,22,Office of the Commissioner of Lobbying of Canada,Commissariat au lobbying du Canada,travelq,owner_org
+204,ocol-clo,22,Office of the Commissioner of Official Languages,Commissariat aux langues officielles,travelq,owner_org
+205,ocsa-bcsc,22,Office of the Chief Science Advisor of Canada,Bureau du conseiller scientifique en chef du Canada,travelq,owner_org
+206,ocsec-bccst,22,Office of the Intelligence Commissioner,Bureau du commissaire au renseignement,travelq,owner_org
+207,oic-ci,22,Office of the Information Commissioner of Canada,Commissariat à l'information du Canada,travelq,owner_org
+208,on,22,Government of Ontario,gouvernement de lOntario,travelq,owner_org
+209,opa-apd,22,Oshawa Port Authority,Administration portuaire d’Oshawa,travelq,owner_org
+210,opc-cpvp,22,Office of the Privacy Commissioner of Canada,Commissariats à l’information et à la protection de la vie privée au Canada,travelq,owner_org
+211,opmc-svpm,22,Old Port of Montreal Corporation Inc.,Société du Vieux-Port de Montréal Inc.,travelq,owner_org
+212,org231,22,Law Commission of Canada,Commission du droit du Canada,travelq,owner_org
+213,osfi-bsif,22,Office of the Superintendent of Financial Institutions Canada,Bureau du surintendant des institutions financières Canada,travelq,owner_org
+214,osgg-bsgg,22,Office of the Secretary to the Governor General,Bureau du secrétaire du gouverneur général,travelq,owner_org
+215,oto-boc,22,Office of the Taxpayers' Ombudsman,Bureau de l'ombudsman des contribuables,travelq,owner_org
+216,ovo-bov,22,Office of the Veterans Ombudsman,Bureau de l'ombudsman des vétérans,travelq,owner_org
+217,pab-cap,22,Pension Appeals Board,Commission d'appel des pensions,travelq,owner_org
+218,pacpi,22,Port-aux-Choix Private Investments Inc.,Port-aux-Choix Private Investments Inc.,travelq,owner_org
+219,pacs-scnp,22,Public Appointments Commission Secretariat,Secrétariat de la Commission des nominations publiques,travelq,owner_org
+220,pande,22,PSPIB-Andes Inc.,PSPIB-Andes Inc.,travelq,owner_org
+221,papa-appa,22,Port Alberni Port Authority,Administration portuaire de Port Alberni,travelq,owner_org
+222,pb,22,Port of Belledune,Port de Belledune,travelq,owner_org
+223,pbc-clcc,22,Parole Board of Canada,Commission des libérations conditionnelles du Canada,travelq,owner_org
+224,pbgp,22,PSPIB Baltimore G.P. Inc.,PSPIB Baltimore G.P. Inc.,travelq,owner_org
+225,pbi,22,PSPIB Bromont Investments Inc.,PSPIB Bromont Investments Inc.,travelq,owner_org
+226,pc,22,Parks Canada,Parcs Canada,travelq,owner_org
+227,pcap,22,PSP Capital Inc.,PSP Capital Inc.,travelq,owner_org
+228,pccr,22,PSPIB-CCR Inc.,PSPIB-CCR Inc.,travelq,owner_org
+229,pch,22,Canadian Heritage,Patrimoine canadien,travelq,owner_org
+230,pco-bcp,22,Privy Council Office,Bureau du Conseil privé,travelq,owner_org
+231,pcon,22,PSPIB-Condor Inc.,PSPIB-Condor Inc.,travelq,owner_org
+232,pdev,22,PSPIB DevCol Inc.,PSPIB DevCol Inc.,travelq,owner_org
+233,pdp,22,Parc Downsview Park Inc.,Parc Downsview Park Inc,travelq,owner_org
+234,pds,22,PSPIB Deep South Inc.,PSPIB Deep South Inc.,travelq,owner_org
+235,pei-ipe,22,Government of Prince Edward Island,gouvernement de lÎle-du-Prince-Édouard,travelq,owner_org
+236,peld,22,PSPIB-Eldorado Inc.,PSPIB-Eldorado Inc.,travelq,owner_org
+237,pemer,22,PSPIB Emerald Inc.,PSPIB Emerald Inc.,travelq,owner_org
+238,petf-fpet,22,Pierre Elliott Trudeau Foundation,Fondation Pierre Elliott Trudeau,travelq,owner_org
+239,pfinc,22,PSP Finco Inc.,PSP Finco Inc.,travelq,owner_org
+240,pgp,22,PSPIB G.P. Inc.,PSPIB G.P. Inc.,travelq,owner_org
+241,pgpf,22,PSPIB G.P. Finance Inc.,PSPIB G.P. Finance Inc.,travelq,owner_org
+242,pgpp,22,PSPIB G.P. Partners Inc.,PSPIB G.P. Partners Inc.,travelq,owner_org
+243,pgrc,22,PSPIB Golden Range Cattle Inc.,PSPIB Golden Range Cattle Inc.,travelq,owner_org
+244,pgrci,22,PSPIB Golden Range Cattle II Inc.,PSPIB Golden Range Cattle II Inc.,travelq,owner_org
+245,phac-aspc,22,Public Health Agency of Canada,Agence de la santé publique du Canada,travelq,owner_org
+246,phfgi,22,PSP H2O FL GP INC.,PSP H2O FL GP INC.,travelq,owner_org
+247,phold,22,Potton Holdings Inc.,Potton Holdings Inc.,travelq,owner_org
+248,phomes,22,PSPIB Homes Inc.,PSPIB Homes Inc.,travelq,owner_org
+249,picpc,22,PSP Investments Canada Inc./Investissements PSP Canada Inc.,PSP Investments Canada Inc./Investissements PSP Canada Inc.,travelq,owner_org
+250,pirp,22,PSPIB IRP60 Inc.,PSPIB IRP60 Inc.,travelq,owner_org
+251,plii,22,PSPIB LUNAR INVESTMENTS INC.,PSPIB LUNAR INVESTMENTS INC.,travelq,owner_org
+252,plsf,22,PSPIB-LSF Inc.,PSPIB-LSF Inc.,travelq,owner_org
+253,pmgi,22,PSPIB MEXICO GP INC.,PSPIB MEXICO GP INC.,travelq,owner_org
+254,pmgp,22,PSPIB Michigan G.P. Inc.,PSPIB Michigan G.P. Inc.,travelq,owner_org
+255,pmo-cpm,22,Office of the Prime Minister,Cabinet du premier ministre,travelq,owner_org
+256,pmprb-cepmb,22,Patented Medicine Prices Review Board Canada,Conseil d'examen du prix des médicaments brevetés Canada,travelq,owner_org
+257,pmsr,22,PSPIB-MSR Inc.,PSPIB-MSR Inc.,travelq,owner_org
+258,pngp,22,PSPIB-Newbury G.P. Inc.,PSPIB-Newbury G.P. Inc.,travelq,owner_org
+259,polar-polaire,22,Polar Knowledge Canada,Savoir polaire Canada,travelq,owner_org
+260,porch,22,PSPIB Orchid Inc.,PSPIB Orchid Inc.,travelq,owner_org
+261,ppa-app,22,Pacific Pilotage Authority Canada,Administration de pilotage du Pacifique Canada,travelq,owner_org
+262,ppais,22,PSPIB Paisas Inc.,PSPIB Paisas Inc.,travelq,owner_org
+263,ppci,22,PSP Public Credit I Inc.,PSP Public Credit I Inc.,travelq,owner_org
+264,ppco,22,PSP Public Credit Opportunities Inc.,PSP Public Credit Opportunities Inc.,travelq,owner_org
+265,ppi,22,PSPIB Pennsylvania Investments Inc.,PSPIB Pennsylvania Investments Inc.,travelq,owner_org
+266,ppm,22,PSP Public Markets Inc.,PSP Public Markets Inc.,travelq,owner_org
+267,ppp,22,PPP Canada Inc.,PPP Canada Inc.,travelq,owner_org
+268,ppsc-sppc,22,Public Prosecution Service of Canada,Service des poursuites pénales du Canada,travelq,owner_org
+269,pptc,22,Passport Canada,Passeport Canada,travelq,owner_org
+270,pqcc-pcprc,22,Office of the President of the Queen’s Privy Council for Canada and Minister of Intergovernmental Affairs,Président du Conseil privé de la Reine pour le Canada et Ministre des Affaires intergouvernementales,travelq,owner_org
+271,prf,22,PSPIB-RE Finance Inc.,PSPIB-RE Finance Inc.,travelq,owner_org
+272,prfp,22,PSPIB-RE Finance Partners Inc.,PSPIB-RE Finance Partners Inc.,travelq,owner_org
+273,prfpi,22,PSPIB-RE Finance Partners II Inc.,PSPIB-RE Finance Partners II Inc.,travelq,owner_org
+274,pripii,22,PSPIB Realty International Inc. / PSPIB Immobilier International Inc.,PSPIB Realty International Inc. / PSPIB Immobilier International Inc.,travelq,owner_org
+275,prmi,22,PSPIB-RE MANCHESTER INC.,PSPIB-RE MANCHESTER INC.,travelq,owner_org
+276,prp,22,PSPIB-RE Partners Inc.,PSPIB-RE Partners Inc.,travelq,owner_org
+277,prpa-appr,22,Prince Rupert Port Authority,L’Administration portuaire de Prince Rupert,travelq,owner_org
+278,prpi,22,PSPIB-RE Partners II Inc.,PSPIB-RE Partners II Inc.,travelq,owner_org
+279,pru,22,PSPIB-RE UK Inc.,PSPIB-RE UK Inc.,travelq,owner_org
+280,psc-cfp,22,Public Service Commission of Canada,Commission de la fonction publique du Canada,travelq,owner_org
+281,psdl,22,PSPIB-SDL Inc.,PSPIB-SDL Inc.,travelq,owner_org
+282,psdptc-tpfdc,22,Public Servants Disclosure Protection Tribunal Canada,Tribunal de la protection des fonctionnaires divulgateurs Canada,travelq,owner_org
+283,psdpt-tpfd,22,Public Servants Disclosure Protection Tribunal Canada,Le Tribunal de la protection des fonctionnaires divulgateurs Canada,travelq,owner_org
+284,pshcp-rssfp,22,Federal Public Service Health Care Plan Administration Authority,Administration du Régime de soins de santé de la fonction publique fédérale,travelq,owner_org
+285,psi,22,Port of Sept-Iles,Port de Sept-Îles,travelq,owner_org
+286,psic-ispc,22,Office of the Public Sector Integrity Commissioner of Canada,Commissariat à l'intégrité du secteur public du Canada,travelq,owner_org
+287,pslrb-crtfp,22,Public Service Labour Relations Board,Commission des relations de travail dans la fonction publique,travelq,owner_org
+288,pspib-oirpsp,22,Public Sector Pension Investment Board,Office d’investissement des régimes de pensions du secteur public,travelq,owner_org
+289,ps-sp,22,Public Safety Canada,Sécurité publique Canada,travelq,owner_org
+290,psst-tdfp,22,Public Service Staffing Tribunal,Tribunal de la dotation de la fonction publique,travelq,owner_org
+291,pstar-psstar,22,PSPIB-Star Inc.,PSPIB-Star Inc.,travelq,owner_org
+292,ptr,22,Port of Trois-Rivières,Port de Trois-Rivières,travelq,owner_org
+293,pwaih,22,PSPIB Waiheke Inc.,PSPIB Waiheke Inc.,travelq,owner_org
+294,pwgsc-tpsgc,22,Public Services and Procurement Canada,Services publics et Approvisionnement Canada,travelq,owner_org
+295,pwii,22,PSPIB WEXFORD INVESTMENTS INC.,PSPIB WEXFORD INVESTMENTS INC.,travelq,owner_org
+296,qpa-apq,22,Quebec Port Authority,Administration portuaire de Québec,travelq,owner_org
+297,rcmp-grc,22,Royal Canadian Mounted Police,Gendarmerie royale du Canada,travelq,owner_org
+298,rct-gtc,22,Registry of the Competition Tribunal,Greffe du Tribunal de la concurrence,travelq,owner_org
+299,ri,22,Revera Inc.,Revera Inc.,travelq,owner_org
+300,ripi,22,Red Isle Private Investments Inc.,Red Isle Private Investments Inc.,travelq,owner_org
+301,rmrcf,22,RCMH-MRCF Inc.,RCMH-MRCF Inc.,travelq,owner_org
+302,rti-tri,22,Ridley Terminals Inc.,Ridley Terminals Inc.,travelq,owner_org
+303,scc-ccn,22,Standards Council of Canada,Conseil canadien des normes,travelq,owner_org
+304,scc-csc,22,Registrar of the Supreme Court of Canada and that portion of the federal public administration appointed under subsection 12(2) of the Supreme Court Act,Registraire de la Cour suprême du Canada et le secteur de l'administration publique fédérale nommé en vertu du paragraphe 12(2) de la Loi sur la Cour suprême,travelq,owner_org
+305,sct-trp,22,Specific Claims Tribunal,Tribunal des revendications particulières,travelq,owner_org
+306,sdtc-tddc,22,Sustainable Development Technology Canada,Technologies du développement durable Canada,travelq,owner_org
+307,sibc-cpivml,22,The Seaway International Bridge Corporation,"Corporation du pont international de la voie maritime, Ltée",travelq,owner_org
+308,sinv,22,Sooke Investments Inc.,Sooke Investments Inc.,travelq,owner_org
+309,sirc-csars,22,Security Intelligence Review Committee,Comité de surveillance des activités de renseignement de sécurité,travelq,owner_org
+310,sjpa-apsj,22,St. John's Port Authority,Administration portuaire de St. John's,travelq,owner_org
+311,slupb-cats,22,Sahtu Land Use Planning Board,Conseil de l’aménagement du territoire du Sahtu,travelq,owner_org
+312,slwb-otes,22,Sahtu Land and Water Board,Office des terres et des eaux du Sahtu,travelq,owner_org
+313,smrbc-sprsm,22,The St. Mary's River Bridge Company,Société du pont de la Rivière Ste Marie,travelq,owner_org
+314,snsicp-scpssnr,22,Secretariat of the National Security and Intelligence Committee of Parliamentarians,Secrétariat du Comité des parlementaires sur la sécurité nationale et le renseignement,travelq,owner_org
+315,sopf-cidp,22,Ship-source Oil Pollution Fund,Caisse d'indemnisation des dommages dus à la pollution par les hydrocarbures causée par les navires,travelq,owner_org
+316,spa-aps,22,Saguenay Port Authority,Administration portuaire du Saguenay,travelq,owner_org
+317,ssc-spc,22,Shared Services Canada,Services partagés Canada,travelq,owner_org
+318,sshrc-crsh,22,Social Sciences and Humanities Research Council of Canada,Conseil de recherches en sciences humaines du Canada,travelq,owner_org
+319,sst-tss,22,Social Security Tribunal of Canada,Tribunal de la Sécurité Sociale du Canada,travelq,owner_org
+320,statcan,22,Statistics Canada,Statistique Canada,travelq,owner_org
+321,stjpa-apstj,22,Saint John Port Authority,Administration portuaire de Saint John,travelq,owner_org
+322,swc-cfc,22,Status of Women Canada,Condition féminine Canada,travelq,owner_org
+323,tatc,22,Transportation Appeal Tribunal of Canada,Tribunal d'appel des transports du Canada,travelq,owner_org
+324,tatc-tatc,22,Transportation Appeal Tribunal of Canada,Tribunal d'appel des transports du Canada,travelq,owner_org
+325,tb-ct,22,Treasury Board,Conseil du Trésor,travelq,owner_org
+326,tbpa-aptb,22,Thunder Bay Port Authority,Administration portuaire de Thunder Bay,travelq,owner_org
+327,tbpi,22,Trinity Bay Private Investments Inc.,Trinity Bay Private Investments Inc.,travelq,owner_org
+328,tbs-sct,22,Treasury Board of Canada Secretariat,Secrétariat du Conseil du Trésor du Canada,travelq,owner_org
+329,tc,22,Transport Canada,Transports Canada,travelq,owner_org
+330,tf,22,Telefilm Canada,Téléfilm Canada,travelq,owner_org
+331,tmc,22,Trans Mountain Corporation,Trans Mountain Corporation,travelq,owner_org
+332,tmp,22,Canada TMP Finance Ltd.,Financière Canada TMP Ltée,travelq,owner_org
+333,tpa-apt,22,Toronto Port Authority,Administration portuaire de Toronto,travelq,owner_org
+334,tsb-bst,22,Transportation Safety Board of Canada,Bureau de la sécurité des transports du Canada,travelq,owner_org
+335,vac-acc,22,Veterans Affairs Canada,Anciens Combattants Canada,travelq,owner_org
+336,vfpa-apvf,22,Vancouver Fraser Port Authority,Administration portuaire Vancouver Fraser,travelq,owner_org
+337,viarail,22,VIA Rail Canada Inc.,VIA Rail Canada Inc.,travelq,owner_org
+338,vinv,22,VOP Investments Inc.,VOP Investments Inc.,travelq,owner_org
+339,vrab-tacra,22,Veterans Review and Appeal Board,Tribunal des anciens combattants (révision et appel),travelq,owner_org
+340,wage,22,Department for Women and Gender Equality,Ministère des Femmes et de l’Égalité des genres,travelq,owner_org
+341,wdba-apwd,22,Windsor-Detroit Bridge Authority,Autorité du pont Windsor-Détroit,travelq,owner_org
+342,wd-deo,22,Western Economic Diversification Canada,Diversification de l'économie de l'Ouest Canada,travelq,owner_org
+343,wpa-apw,22,Windsor Port Authority,Administration portuaire de Windsor,travelq,owner_org
+344,yesab-oeesy,22,Yukon Environmental and Socio-economic Assessment Board,Office d’évaluation environnementale et socio-économique du Yukon,travelq,owner_org
+345,ysrb-odsy,22,Yukon Surface Rights Board,Office des droits de surface du Yukon,travelq,owner_org
+684,NTR,25,Nothing To Report,Rien à signaler,travelq,format
+685,DEFAULT,25,Travel Expenses,Dépenses de voyage,travelq,format
+346,r7,26,Unspecified,,travelq,total_range
+347,r6,26,$0 - $249.99,,travelq,total_range
+348,r5,26,$250.00 - $499.99,,travelq,total_range
+349,r4,26,$500.00 - $999.99,,travelq,total_range
+350,r3,26,"$1,000.00 - $4,999.99",,travelq,total_range
+351,r2,26,"$5,000.00 - $24,999.99",,travelq,total_range
+352,r1,26,"$25,000.00 or more",,travelq,total_range
