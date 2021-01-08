@@ -130,4 +130,38 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
     if "public_servants_kdollars" not in solr_record or solr_record["public_servants_kdollars"] == '':
         solr_record["public_servants_kdollars"] = 0
 
+    # Calculate a total
+    total = 0.0
+    if int(csv_record['year']) < 2018:
+        if csv_record['public_servants_kdollars']:
+            total += float(csv_record['public_servants_kdollars'])
+        if csv_record['non_public_servants_kdollars']:
+            total += float(csv_record['non_public_servants_kdollars'])
+    else:
+        if csv_record['operational_activities_kdollars']:
+            total += float(csv_record['operational_activities_kdollars'])
+        if csv_record['key_stakeholders_kdollars']:
+            total += float(csv_record['key_stakeholders_kdollars'])
+        if csv_record['internal_governance_kdollars']:
+            total += float(csv_record['internal_governance_kdollars'])
+        if csv_record['training_kdollars']:
+            total += float(csv_record['training_kdollars'])
+        if csv_record['other_kdollars']:
+            total += float(csv_record['other_kdollars'])
+    if csv_record['hospitality_kdollars']:
+        total += float(csv_record['hospitality_kdollars'])
+    if csv_record['conference_fees_kdollars']:
+        total += float(csv_record['conference_fees_kdollars'])
+
+    if total >= 100000:
+        solr_record['total_range'] = 'r1'
+    elif 100000 > total >= 10000:
+        solr_record['total_range'] = 'r2'
+    elif 10000 > total >= 1000:
+        solr_record['total_range'] = 'r3'
+    elif 1000 > total >= 100:
+        solr_record['total_range'] = 'r4'
+    else:
+        solr_record['total_range'] = 'r5'
+
     return solr_record
