@@ -1,0 +1,59 @@
+{% load i18n %}
+
+<div class="row mrgn-bttm-lg mrgn-tp-md">
+    <div class="col-md-12">
+        <div class="row mrgn-bttm-md">
+            {% if language == 'fr' %}<a href="https://stadification-rechercher.ouvert.canada.ca/chart/si/index-fr.html?{{ doc.service_id }}">
+                {% else %}<a href="https://search-staging.open.canada.ca/chart/si/index-en.html?{{ doc.service_id }}">{% endif %}
+                <div class="col-md-7"><h2 class=" mrgn-tp-0">{% if language == 'fr' %}{{ doc.service_name_fr | safe }}{% else %}{{ doc.service_name_en | safe }}{% endif %}</h2>
+                </div><div class="col-md-5 text-right">
+                    <span class="btn btn-success btn-smt">{% trans 'Performance Dashboard' %}</span></div>
+                    </a>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                {% if language == 'fr' %}
+                    {% if doc.service_description_fr %}{{ doc.service_description_fr | safe }}{% endif %}
+                {% else %}
+                    {% if doc.service_description_en %}{{ doc.service_description_en | safe }}{% endif %}
+                {% endif %}
+            </div>
+        </div><div class="row">
+            <div class="col-md-12">
+                    <strong>{% trans 'Organization' %}</strong>: {% if language == 'fr' %}{{ doc.department_name_fr }}{% else %}{{ doc.department_name_en }}{% endif %}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+            <details>
+                <summary>{% trans 'Details' %}</summary>
+                <strong>{% trans 'Program' %}</strong>: {% if language == 'fr' %}{{ doc.program_name_fr | safe }}{% else %}{{ doc.program_name_en | safe }}{% endif %}<br>
+                <strong>{% trans 'Service Type' %}</strong>: <ul class="lst-spcd">
+                {% if language == 'fr' %}
+                    {% for stype in doc.service_type_fr %}<li>{{ stype }}</li>{% endfor %}</ul>
+                {% else %}
+                    {% for stype in doc.service_type_en %}<li>{{ stype }}</li>{% endfor %}</ul>
+                {% endif %}
+                {% if doc.service_url_en|length > 0 or doc.service_url_fr|length > 0 %}
+                    <strong>{% trans 'URL to Service' %}</strong>:
+                    <ul class="lst-spcd">
+                    {% if language == 'fr' %}
+                        {% for link in doc.service_url_fr %}<li><a href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ link }}</a></li>{% endfor %}
+                    {% else %}
+                        {% for link in doc.service_url_en %}<li><a href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ link }}</a></li>{% endfor %}
+                    {% endif %}
+                    </ul>
+                {% endif %}
+                <strong>{% trans 'Client/Target Groups' %}</strong> :
+                    <ul class="lst-spcd">
+                        {% if language == 'fr' %}
+                            {% for tg in doc.client_target_groups_fr %}<li>{{ tg }}</li>{% endfor %}
+                        {% else %}
+                            {% for tg in doc.client_target_groups_en %}<li>{{ tg }}</li>{% endfor %}
+                        {% endif %}
+                    </ul>
+            </details>
+            </div>
+        </div>
+    </div>
+</div>
