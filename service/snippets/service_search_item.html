@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load search_extras %}
 
 <div class="row mrgn-bttm-lg mrgn-tp-md">
     <div class="col-md-12">
@@ -27,7 +28,22 @@
             <div class="col-md-12">
             <details>
                 <summary>{% trans 'Details' %}</summary>
-                <strong>{% trans 'Program' %}</strong>: {% if language == 'fr' %}{{ doc.program_name_fr | safe }}{% else %}{{ doc.program_name_en | safe }}{% endif %}<br>
+                <strong>{% trans 'Program' %}</strong>:
+                    <ul class="lst-spcd">
+                    {% if language == 'fr' %}
+                        {% with doc.program_name_fr|split:"," as programs %}
+                            {% for program in programs %}
+                                <li>{{ program | safe }}</li>
+                            {% endfor %}
+                        {% endwith %}
+                    {% else %}
+                        {% with doc.program_name_en|split:"," as programs %}
+                            {% for program in programs %}
+                                <li>{{ program | safe }}</li>
+                            {% endfor %}
+                        {% endwith %}
+                    {% endif %}
+                    </ul>
                 <strong>{% trans 'Service Type' %}</strong>: <ul class="lst-spcd">
                 {% if language == 'fr' %}
                     {% for stype in doc.service_type_fr %}<li>{{ stype }}</li>{% endfor %}</ul>
