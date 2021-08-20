@@ -4,8 +4,8 @@
 <div class="row mrgn-bttm-lg mrgn-tp-md">
     <div class="col-md-12">
         <div class="row mrgn-bttm-md">
-            {% if language == 'fr' %}<a href="https://stadification-rechercher.ouvert.canada.ca/chart/si/index-fr.html?{{ doc.service_id }}">
-                {% else %}<a href="https://search-staging.open.canada.ca/chart/si/index-en.html?{{ doc.service_id }}">{% endif %}
+            {% if language == 'fr' %}<a href="https://ouvert.canada.ca/chart/si/index-fr.html?{{ doc.service_id }}">
+                {% else %}<a href="https://open.canada.ca/chart/si/index-en.html?{{ doc.service_id }}">{% endif %}
                 <div class="col-md-7"><h2 class=" mrgn-tp-0">{% if language == 'fr' %}{{ doc.service_name_fr | safe }}{% else %}{{ doc.service_name_en | safe }}{% endif %}</h2>
                 </div><div class="col-md-5 text-right">
                     <span class="btn btn-success btn-smt">{% trans 'Performance Dashboard' %}</span></div>
