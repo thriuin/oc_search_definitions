@@ -17,11 +17,9 @@
         {% for doc in docs %}
         <h2>{{ org_title }} {{ doc.year|add:-1 }} - {{ doc.year }}</h2>
 
-            <p>{% blocktranslate with org_title=org_title doc_year=doc.year %}As required by the Treasury Board Directive on Travel, Hospitality, Conference and Event Expenditures, this report provides information on the annual expenditures for each of travel, hospitality and conference fees for {{ org_title }} for the fiscal year ending March 31, {{ doc_year }}. It also provides the variance explanations from the previous fiscal year in each of these areas.{% endblocktranslate %}</p>
+            <p>{% blocktranslate with org_title=org_title doc_year=doc.year %}As required by the Treasury Board Directive on Travel, Hospitality, Conference and Event Expenditures, this report provides information on travel, hospitality and conference expenditures for {{ org_title }} for the fiscal year ended March 31, {{ doc_year }}.{% endblocktranslate %}</p>
 
-            <p>{% translate 'This information is updated annually and does not contain information withheld under the Access to Information Act or the Privacy Act.' %}</p>
-
-            <p>{% translate "Expenditures on travel, hospitality and conference fees incurred by federal departments and agencies are related to activities that support a departmental or agency mandate and the government’s priorities." %}</p>
+            <p>{% translate 'Travel, hospitality and conference expenditures incurred by a federal department or agency relate to activities that support the department or agency’s mandate and the government’s priorities.' %}</p>
 
             <h3>{% translate "Mandate:" %}</h3>
             <p>{% if language == 'fr' %}{{ doc.mandate_description_fr }}{% else %}{{ doc.mandate_description_en }}{% endif %}</p>

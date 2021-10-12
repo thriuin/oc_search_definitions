@@ -23,16 +23,12 @@ msgstr "Rapport annuel sur les dépenses de voyages, d’accueil et de conféren
 
 #: C:\Users\rosst\PycharmProjects\oc_search\search\templates\snippets\custom\tmpex0q0vid\travela_record.html:20
 #, python-format
-msgid "As required by the Treasury Board Directive on Travel, Hospitality, Conference and Event Expenditures, this report provides information on the annual expenditures for each of travel, hospitality and conference fees for %(org_title)s for the fiscal year ending March 31, %(doc_year)s. It also provides the variance explanations from the previous fiscal year in each of these areas."
-msgstr "Comme l’exige la Directive sur les dépenses de voyages, d’accueil, de conférences et d’événements du Conseil du Trésor, le présent rapport fournit de l’information sur les dépenses de voyages, d’accueil et de conférences de  %(org_title)s pour l’exercice se terminant le 31 mars %(doc_year)s, sauf l’information non divulguée en vertu de la la Loi sur l’accès à l’information ou de la Loi sur la protection des renseignements personnels."
+msgid "As required by the Treasury Board Directive on Travel, Hospitality, Conference and Event Expenditures, this report provides information on travel, hospitality and conference expenditures for %(org_title)s for the fiscal year ended March 31, %(doc_year)s."
+msgstr "Comme l’exige la Directive sur les dépenses de voyages, d’accueil, de conférences et d’événements du Conseil du Trésor, le présent rapport fournit de l’information sur les dépenses de voyages, d’accueil et de conférences de %(org_title)s pour l’exercice se terminant le 31 mars %(doc_year)s."
 
 #: C:\Users\rosst\PycharmProjects\oc_search\search\templates\snippets\custom\tmpex0q0vid\travela_record.html:22
-msgid "This information is updated annually and does not contain information withheld under the Access to Information Act or the Privacy Act."
-msgstr "Les dépenses de voyages, d’accueil et de conférences engagées par un ministère ou un organisme fédéral sont liées à des activités qui appuient le mandat du ministère ou de l’organisme et les priorités du gouvernement."
-
-#: C:\Users\rosst\PycharmProjects\oc_search\search\templates\snippets\custom\tmpex0q0vid\travela_record.html:24
-msgid "Expenditures on travel, hospitality and conference fees incurred by federal departments and agencies are related to activities that support a departmental or agency mandate and the government’s priorities."
-msgstr "Les dépenses de voyages, d’accueil et de conférences de Normes d’accessibilité Canada soutiennent l’exécution des programmes et la prestation des services fondamentaux suivants pour les Canadiens."
+msgid "Travel, hospitality and conference expenditures incurred by a federal department or agency relate to activities that support the department or agency’s mandate and the government’s priorities."
+msgstr "Les dépenses de voyages, d’accueil et de conférences engagées par un ministère ou un organisme fédéral sont liées à des activités qui appuient le mandat du ministère ou de l’organisme et les priorités gouvernementales."
 
 #: C:\Users\rosst\PycharmProjects\oc_search\search\templates\snippets\custom\tmpex0q0vid\travela_record.html:26
 msgid "Mandate:"
