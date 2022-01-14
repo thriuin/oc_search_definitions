@@ -45,7 +45,7 @@ class Command(BaseCommand):
                     if not minister['end_date'] == "":
                         end_date = datetime.strptime(minister['end_date'], '%Y-%m-%dT%H:%M:%S').replace(tzinfo=pytz.timezone(local_tz))
                     else:
-                        end_date = datetime.max.replace(tzinfo=pytz.timezone(local_tz))
+                        end_date = datetime(2999, 12, 31).replace(tzinfo=pytz.timezone(local_tz))
                     chronocode, created = ChronologicCode.objects.get_or_create(code_id_id=code.id,
                                                                                 start_date=start_date)
                     chronocode.label = minister['name']
