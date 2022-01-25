@@ -51,8 +51,9 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
 
     try:
         if 'total' in solr_record and solr_record['total'] and format != 'NTR':
-            total_decimal = parse_decimal(solr_record['total'], locale='en_US')
-            if - 0 < total_decimal < 250:
+            total_string = str(solr_record['total'])
+            total_decimal = parse_decimal(total_string, locale='en_US')
+            if 0 < total_decimal < 250:
                 solr_record['total_range'] = 'r6'
             elif 250 <= total_decimal < 500:
                 solr_record['total_range_'] = 'r5'
@@ -68,6 +69,9 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
                 solr_record['total_range'] = 'r7'
         else:
             solr_record['total_range'] = 'r7'
+        if 'name' in solr_record and format != 'NTR':
+            solr_record['name_fr'] = solr_record['name']
+            solr_record['name_en'] = solr_record['name']
 
 
     except NumberFormatError as nfe:
