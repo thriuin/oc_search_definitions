@@ -56,39 +56,39 @@
             </div>
         </section>
 
-        {% if doc.question_eng != '-' and doc.question_fra != '-' %}
+        {% if doc.question_en != '-' and doc.question_fr != '-' %}
             <h2>{% trans 'Issue/Question: ' %}</h2>
             <div>
-                {% if language == 'fr' %}{{ doc.question_fra | markdown_filter | normalize_headings | safe }}
+                {% if language == 'fr' %}{{ doc.question_fr | markdown_filter | normalize_headings | safe }}
                 {% else %}
-                {{ doc.question_eng | markdown_filter | normalize_headings | safe}}{% endif %}
+                {{ doc.question_en | markdown_filter | normalize_headings | safe}}{% endif %}
             </div>
         {% endif %}
 
-        {% if doc.response_eng != '-' and doc.response_fra != '-' %}
+        {% if doc.response_en != '-' and doc.response_fr != '-' %}
             <h2>{% trans 'Suggested Response: ' %}</h2>
             <div>
-                {% if language == 'fr' %}{{ doc.response_fra | markdown_filter | safe }}
+                {% if language == 'fr' %}{{ doc.response_fr | markdown_filter | safe }}
                 {% else %}
-                {{ doc.response_eng | markdown_filter | safe}}{% endif %}
+                {{ doc.response_en | markdown_filter | safe}}{% endif %}
             </div>
         {% endif %}
 
-        {% if doc.background_eng != '-' and doc.background_fra != '-' %}
+        {% if doc.background_en != '-' and doc.background_fr != '-' %}
             <h2>{% trans 'Background: ' %}</h2>
             <div>
-                {% if language == 'fr' %}{{ doc.background_fra | markdown_filter | safe }}
+                {% if language == 'fr' %}{{ doc.background_fr | markdown_filter | safe }}
                 {% else %}
-                {{ doc.background_eng | markdown_filter | safe}}{% endif %}
+                {{ doc.background_en | markdown_filter | safe}}{% endif %}
             </div>
         {% endif %}
 
-        {% if doc.additional_information_eng != '-' and doc.additional_information_fra != '-' %}
+        {% if doc.additional_information_en != '-' and doc.additional_information_fr != '-' %}
             <h2>{% trans 'Additional Information: ' %}</h2>
             <div>
-                {% if language == 'fr' %}{{ doc.background_fra | markdown_filter | safe }}
+                {% if language == 'fr' %}{{ doc.background_fr | markdown_filter | safe }}
                 {% else %}
-                {{ doc.background_eng | markdown_filter | safe}}{% endif %}
+                {{ doc.background_en | markdown_filter | safe}}{% endif %}
             </div>
         {%  endif %}
 
