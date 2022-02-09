@@ -86,9 +86,9 @@
         {% if doc.additional_information_en != '-' and doc.additional_information_fr != '-' %}
             <h2>{% trans 'Additional Information: ' %}</h2>
             <div>
-                {% if language == 'fr' %}{{ doc.background_fr | markdown_filter | safe }}
+                {% if language == 'fr' %}{{ doc.additional_information_fr | markdown_filter | safe }}
                 {% else %}
-                {{ doc.background_en | markdown_filter | safe}}{% endif %}
+                {{ doc.additional_information_en | markdown_filter | safe}}{% endif %}
             </div>
         {%  endif %}
 
