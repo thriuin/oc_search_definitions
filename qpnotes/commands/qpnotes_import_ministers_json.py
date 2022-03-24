@@ -16,6 +16,7 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('--json_file', type=str, help='Ministers JSON file name', required=True)
         parser.add_argument('--search', type=str, help='A unique code identifier for the Search', required=True)
+        parser.add_argument('--flush', action='store_true', help='Flush existing data before loading', default=True)
 
     def handle(self, *args, **options):
         local_tz = "US/Eastern"
@@ -24,6 +25,7 @@ class Command(BaseCommand):
             raise CommandError('JSON file not found: ' + options['json_file'])
 
         with open(options['json_file'], 'r', encoding='utf8') as fp:
+
             c_count = 0
             c_count_new = 0
             cc_count = 0
@@ -31,6 +33,14 @@ class Command(BaseCommand):
             search = Search.objects.get(search_id=options['search'])
             choices = json.load(fp)
             field = Field.objects.get(field_id='minister', search_id=search)
+
+            # Remove existing data if requested
+            if options['flush']:
+                self.logger.info('Flushing existing data')
+                codes = Code.objects.filter(field_id=field)
+                for code in codes:
+                    ChronologicCode.objects.filter(code_id=code).delete()
+
             for choice in choices:
                 code, created = Code.objects.get_or_create(field_id_id=field.id, code_id=choice)
                 code.label_en = choices[choice]['en']
