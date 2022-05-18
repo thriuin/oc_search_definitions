@@ -8,7 +8,7 @@
 
 {% block main-content-title %}
 <h1 property="name" id="wb-cont">
-  {% translate 'Contract Details for:' %} {{ docs.0.vendor_name }}</h1>
+  {% translate 'Contract Details:' %} {{ docs.0.vendor_name }}</h1>
 {% endblock main-content-title %}
 
 {% block main-content-centre %}
@@ -161,7 +161,11 @@
         </div>
         <div class="row">
             <div class="col-sm-5"><strong>{% trans 'Limited Tendering Reason: ' %}</strong></div>
-            <div class="col-sm-7">{% if LANGUAGE_CODE == 'fr' %}{{ doc.limited_tendering_reason_fr }}{% else %}{{ doc.limited_tendering_reason_en }}{% endif %}</div>
+            <div class="col-sm-7">{% if LANGUAGE_CODE == 'fr' %}
+              {% for ltr in doc.limited_tendering_reason_fr %}{{ ltr }}<br>{% endfor %}
+              {% else %}
+              {% for ltr in doc.limited_tendering_reason_en %}{{ ltr }}<br>{% endfor %}{% endif %}
+            </div>
         </div>
         {% if not doc.contracting_entity_en == '-' and not doc.contracting_entity_fr == '-' %}
         <div class="row">
@@ -177,16 +181,20 @@
         {% endif %}
         <div class="row">
             <div class="col-sm-5"><strong>{% trans 'Trade Agreement Exceptions and Exclusions: ' %}</strong></div>
-            <div class="col-sm-7">{% if LANGUAGE_CODE == 'fr' %}{{ doc.trade_agreement_exceptions_fr }}{% else %}{{ doc.trade_agreement_exceptions_en }}{% endif %}</div>
+            <div class="col-sm-7">{% if LANGUAGE_CODE == 'fr' %}
+                {% for tax in doc.trade_agreement_exceptions_fr %}{{ tax }}<br>{% endfor %}
+              {% else %}
+                {% for tax in doc.trade_agreement_exceptions_en %}{{ tax }}<br>{% endfor %}
+              {% endif %}</div>
         </div>
         {% if not doc.land_claimss == '-' %}
             <div class="row">
                 <div class="col-sm-5"><strong>{% trans 'Comprehensive Land Claims Agreement: ' %}</strong></div>
                 <div class="col-sm-7">
                     {% if LANGUAGE_CODE == 'fr' %}
-                        {{ doc.land_claims_fr }}
+                        {% for lc in doc.land_claims_fr %}{{ lc }}<br>{% endfor %}
                     {% else %}
-                        {{ doc.land_claims_en }}
+                        {% for lc in doc.land_claims_en %}{{ lc }}<br>{% endfor %}
                     {% endif %}</div>
             </div>
         {% endif %}

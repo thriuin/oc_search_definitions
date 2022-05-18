@@ -1,11 +1,13 @@
 from babel.numbers import parse_decimal, NumberFormatError
 from datetime import datetime, timezone
 from django.http import HttpRequest
+import logging
 from search.models import Search, Field, Code
 from SolrClient import SolrResponse
 
 
 MAX_YEAR = 9999
+logger = logging.getLogger(__name__)
 
 
 def get_dollar_range(dollar_amount: float):
@@ -30,7 +32,7 @@ def get_dollar_range(dollar_amount: float):
             else:
                 return_code = '06'
         except NumberFormatError:
-            # @TODO: Log error
+            logger.warning("Error converting dollar amount to float: {}".format(dollar_amount))
             pass
     return return_code
 
@@ -72,6 +74,48 @@ def post_mlt_solr_query(context: dict, solr_response: SolrResponse, solr_query: 
 
 
 def filter_csv_record(csv_record,search: Search, fields: dict, codes: dict, format: str):
+    if format != 'NTR':
+
+        if not csv_record['agreement_type_code']:
+            csv_record['agreement_type_code'] = '0'
+        else:
+            # Do some data cleanup on the Agreement Type Code
+            if str(csv_record['agreement_type_code']).strip() == 'O' or str(csv_record['agreement_type_code']).strip() == '00':
+                csv_record['agreement_type_code'] = '0'
+            if csv_record['agreement_type_code'][0:1] == "0":
+                csv_record['agreement_type_code'] = '0'
+            if csv_record['agreement_type_code'] == 'A,R':
+                csv_record['agreement_type_code'] = 'AR'
+            if csv_record['agreement_type_code'] == 'AIT':
+                csv_record['agreement_type_code'] = 'I'
+            if csv_record['agreement_type_code'] == '1':
+                csv_record['agreement_type_code'] = 'I'
+            if csv_record['agreement_type_code'].startswith('?'):
+                csv_record['agreement_type_code'] = ''
+            csv_record['agreement_type_code'] = csv_record['agreement_type_code'].strip()
+
+        # Combine all crown owned exemptions into one
+        if csv_record['intellectual_property'].startswith('A'):
+            csv_record['intellectual_property'] = 'A_'
+
+        if csv_record['article_6_exceptions'].startswith('?'):
+            csv_record['article_6_exceptions'] = ''
+
+        if csv_record['award_criteria'][0:1] == "0":
+            csv_record['award_criteria'] = '0'
+        if csv_record['award_criteria'][0:1] == "?":
+            csv_record['award_criteria'] = ''
+
+        if csv_record['trade_agreement_exceptions'] not in codes['trade_agreement_exceptions'] and csv_record['trade_agreement_exceptions'] != '':
+            logger.warning('Unknown Trade Agreement Exceptions code: %s for %s,%s', csv_record['trade_agreement_exceptions'],
+                           csv_record['owner_org'], csv_record['reference_number'])
+            csv_record['trade_agreement_exceptions'] = ''
+
+        if csv_record['country_of_vendor'].lower() not in codes['country_of_vendor'] and csv_record['country_of_vendor'] != '':
+            logger.warning('Unknown Country of Vendor code: %s for %s,%s', csv_record['country_of_vendor'],
+                           csv_record['owner_org'], csv_record['reference_number'])
+            csv_record['country_of_vendor'] = ''
+
     return True,  csv_record
 
 
@@ -90,19 +134,6 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
         if solr_record['contract_value']:
             solr_record['contract_value_range'] = get_dollar_range(solr_record['contract_value'])
 
-        if not csv_record['agreement_type_code']:
-            solr_record['agreement_type_code'] = '0'
-        else:
-            # Do some data cleanup on the Agreement Type Code
-            if csv_record['agreement_type_code'] == 'O':
-                solr_record['agreement_type_code'] = '0'
-            if csv_record['agreement_type_code'][0:1] == "0":
-                solr_record['agreement_type_code'] = '0'
-            if csv_record['agreement_type_code'] == 'A,R':
-                solr_record['agreement_type_code'] = 'AR'
-            if csv_record['agreement_type_code'] == 'AIT':
-                solr_record['agreement_type_code'] = 'I'
-
         # Convert date fields to Solr date fields
         working_year = MAX_YEAR
         if csv_record['contract_period_start']:
@@ -116,7 +147,6 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
             contract_date = datetime.strptime(csv_record['contract_date'], '%Y-%m-%d')
             solr_record['contract_date'] = contract_date.strftime('%Y-%m-%dT00:00:00Z')
 
-
         # Expand the Agreement Type Code to their lookup values
         atc = solr_record['agreement_type_code'].lower()
         if atc in codes['agreement_type_code']:
@@ -124,7 +154,7 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
             ta_fr = []
 
             lookup_values = codes['agreement_type_code'][solr_record['agreement_type_code'].lower()].lookup_codes_default.split(',')
-            # @TODO: Conditional lookups
+
             if codes['agreement_type_code'][atc].lookup_date_field:
                 # For now we assume all tests are Lest Than comparing dates
                 comparison_date = datetime.strptime(csv_record[codes['agreement_type_code'][atc].lookup_date_field], '%Y-%m-%d').replace(tzinfo=timezone.utc)
@@ -135,10 +165,6 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
                 ta_fr.append(codes['agreement_type_code'][v.lower()].label_fr)
             solr_record['trade_agreement_en'] = ta_en
             solr_record['trade_agreement_fr'] = ta_fr
-
-        # Combine all crown owned exemptions into one
-        if csv_record['intellectual_property'].startswith('A'):
-            solr_record['intellectual_property'] = 'A_'
 
         # Handle older aboriginal record codes
         if working_year < 2022 and csv_record['agreement_type_code'] == 'A':
