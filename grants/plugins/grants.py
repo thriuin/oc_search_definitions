@@ -74,8 +74,6 @@ def filter_csv_record(csv_record,search: Search, fields: dict, codes: dict, form
 def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields: dict, codes: dict, format: str):
 
     if format == 'NTR':
-        solr_record['format_en'] = 'Nothing To Report'
-        solr_record['format_fr'] = 'Rien à signaler'
         solr_record['has_amendments'] = "0"
         if len(csv_record['fiscal_year']) > 4:
             try:
@@ -149,36 +147,10 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
 
 
 def pre_render_search(context: dict, template: str, request: HttpRequest, lang: str, search: Search, fields: dict, codes: dict):
-    """
-    Pre-render the template with the context
-    :param context: the Django view context to be used
-    :param template: the default name of the  template to be rendered
-    :param request: the HTTP request object
-    :param lang: the language of the page being rendered
-    :param search: the search object
-    :param fields: the fields to be used
-    :param codes: the codes to be used
-    :param chroncodes: the chronology codes to be used
-    :param format: the format to be used
-    :return: cont, and the template name
-    """
     return context, template
 
-def pre_render_record(context: dict, template: str, request: HttpRequest, lang: str, search: Search, fields: dict, codes: dict):
-    """
-    Pre-render the template with the context
-    :param context: the Django view context to be used
-    :param template: the default name of the  template to be rendered
-    :param request: the HTTP request object
-    :param lang: the language of the page being rendered
-    :param search: the search object
-    :param fields: the fields to be used
-    :param codes: the codes to be used
-    :param chroncodes: the chronology codes to be used
-    :param format: the format to be used
-    :return: cont, and the template name
-    """
 
+def pre_render_record(context: dict, template: str, request: HttpRequest, lang: str, search: Search, fields: dict, codes: dict):
     if request.get_raw_uri().endswith('?amendments'):
         context['amendments'] = True
     else:
