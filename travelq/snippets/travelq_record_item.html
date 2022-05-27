@@ -33,6 +33,12 @@
         <div class="col-md-3 mrgn-bttm-md"><strong>Destination :</strong></div>
         <div class="col-md-9 mrgn-bttm-md">{{ doc.destination_fr }}</div>
     </div>
+    {% if doc.additional_comments_fr != '-' %}
+    <div class="row">
+        <div class="col-md-3 mrgn-bttm-md"><strong>Commentaires additionnels :</strong></div>
+        <div class="col-md-9 mrgn-bttm-md">{{ doc.additional_comments_fr }}</div>
+    </div>
+    {% endif %}
     <div class="row">
         <div class="col-md-3 mrgn-bttm-md"><strong>Numéro de demande:</strong></div>
         <div class="col-md-9 mrgn-bttm-md">{{ doc.ref_number }}</div>
@@ -88,6 +94,12 @@
         <div class="col-md-3 mrgn-bttm-md"><strong>Destination:</strong></div>
         <div class="col-md-9 mrgn-bttm-md">{{ doc.destination_en }}</div>
     </div>
+    {% if doc.additional_comments_en != '-' %}
+    <div class="row">
+        <div class="col-md-3 mrgn-bttm-md"><strong>Additional Comments:</strong></div>
+        <div class="col-md-9 mrgn-bttm-md">{{ doc.additional_comments_en }}</div>
+    </div>
+    {% endif %}
     <div class="row">
         <div class="col-md-3 mrgn-bttm-md"><strong>Reference Number:</strong></div>
         <div class="col-md-9 mrgn-bttm-md">{{ doc.ref_number }}</div>
