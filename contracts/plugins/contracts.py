@@ -182,15 +182,6 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
         if not csv_record['instrument_type']:
             solr_record['instrument_type'] = ''
 
-        if working_year < 2022 and csv_record['agreement_type_code'] == "A":
-            solr_record['aboriginal_procurement_strategy'] = 'yes'
-        elif working_year < 2022 and csv_record['agreement_type_code'] == "B":
-            solr_record['aboriginal_procurement_strategy'] = 'no'
-        elif working_year < 2022 and csv_record['agreement_type_code'] == "BA":
-            solr_record['aboriginal_procurement_strategy'] = 'yes'
-        else:
-            solr_record['aboriginal_procurement_strategy'] = '-'
-
     return solr_record
 
 # Version 1.1 Methods

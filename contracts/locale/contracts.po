@@ -114,13 +114,11 @@ msgstr "Exceptions et exclusions applicables aux accords commerciaux :"
 msgid "Comprehensive Land Claims Agreement: "
 msgstr "Entente sur les revendications territoriales globales :"
 
-msgid "Procurement Strategy for Aboriginal Business: "
+msgid "Procurement Strategy for Indigenous Business: "
 msgstr "Stratégie d’approvisionnement auprès des entreprises autochtones :"
 
-msgid "Procurement Strategy for Aboriginal Business Incidental Indicator: "
-msgstr ""
-"Indicateur d'incidence de la Stratégie d’approvisionnement auprès des "
-"entreprises autochtones :"
+msgid "Indigenous Business excluding PSIB: "
+msgstr "Entreprises autochtones excluant le marché réservé en vertu de la SAEA :"
 
 msgid "Intellectual Property: "
 msgstr "propriété intellectuelle :"
