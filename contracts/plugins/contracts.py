@@ -168,15 +168,15 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
 
         # Handle older aboriginal record codes
         if working_year < 2022 and csv_record['agreement_type_code'] == 'A':
-            solr_record['aboriginal_business_incidental'] = 'Y'
+            solr_record['indigenous_business_excluding_psib'] = 'Y'
             solr_record['lands_claims'] = '-'
 
         if working_year < 2022 and csv_record['agreement_type_code'] == 'B':
-            solr_record['aboriginal_business_incidental'] = '-'
+            solr_record['indigenous_business_excluding_psib'] = '-'
             solr_record['lands_claims'] = 'Y'
 
         if working_year < 2022 and csv_record['agreement_type_code'] == 'BA':
-            solr_record['aboriginal_business_incidental'] = '-'
+            solr_record['indigenous_business_excluding_psib'] = '-'
             solr_record['lands_claims'] = '-'
 
         if not csv_record['instrument_type']:

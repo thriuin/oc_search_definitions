@@ -198,15 +198,15 @@
                     {% endif %}</div>
             </div>
         {% endif %}
-        {% if not doc.aboriginal_business == '-' %}
+        {% if not doc.indigenous_business == '-' %}
             <div class="row">
                 <div class="col-sm-5"><strong>{% trans 'Procurement Strategy for Indigenous Business: ' %}</strong></div>
-                <div class="col-sm-7">{% if LANGUAGE_CODE == 'fr' %}{{ doc.aboriginal_business_fr }}{% else %}{{ doc.aboriginal_business_en }}{% endif %}</div>
+                <div class="col-sm-7">{% if LANGUAGE_CODE == 'fr' %}{{ doc.indigenous_business_fr }}{% else %}{{ doc.indigenous_business_en }}{% endif %}</div>
             </div>
         {% endif %}
          <div class="row">
             <div class="col-sm-5"><strong>{% trans 'Indigenous Business excluding PSIB: ' %}</strong></div>
-            <div class="col-sm-7">{% if LANGUAGE_CODE == 'fr' %}{{ doc.aboriginal_business_incidental_fr }}{% else %}{{ doc.aboriginal_business_incidental_en }}{% endif %}</div>
+            <div class="col-sm-7">{% if LANGUAGE_CODE == 'fr' %}{{ doc.indigenous_business_excluding_psib_fr }}{% else %}{{ doc.indigenous_business_excluding_psib_en }}{% endif %}</div>
         </div>
         {% if not doc.intellectual_property == '-' %}
         <div class="row">
