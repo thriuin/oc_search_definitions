@@ -143,6 +143,9 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
         if 'recipient_city' in csv_record and csv_record['recipient_city']:
             solr_record = _set_bilingual_field('recipient_city', csv_record['recipient_city'], solr_record)
 
+        # Make the agreement number searchable
+        solr_record['agreement_number_text'] = solr_record['agreement_number']
+
     return solr_record
 
 
