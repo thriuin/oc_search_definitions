@@ -1,0 +1,57 @@
+{% load i18n %}
+{% load search_extras %}
+
+<div class="row mrgn-bttm-lg">
+
+    <div class="col-sm-9">
+        <h2 class="mrgn-tp-0 mrgn-bttm-sm h4">
+            {% if language == 'fr' %}
+                <a href="{{ path_info }}record/{{ doc.id }}">{{ doc.indicators_fra | truncatewords_html:22 | markdown_filter | safe }}</a>
+            {% else %}
+                <a href="{{ path_info }}record/{{ doc.id }}">{{ doc.indicators_eng | truncatewords_html:22 | markdown_filter | safe }}</a>
+            {% endif %}
+        </h2>
+    </div>
+    <div class="col-sm-3 text-right">
+        <strong>
+            {% if language == 'fr' %}{{ doc.reporting_period_fr }}
+            {% else %}{{ doc.reporting_period_en }}
+            {% endif %}
+        </strong>
+    </div>
+
+    <div class="col-sm-12">
+        <strong>{% trans 'Milestone: ' %}</strong>{% if language == 'fr' %}{{ doc.milestones_fr }}{% else %}{{ doc.milestones_en }}{% endif %}
+    </div>
+    <div class="col-sm-12">
+        <strong>{% trans 'Commitment: ' %}</strong>{% if language == 'fr' %}{{ doc.commitments_fr }}{% else %}{{ doc.commitments_en }}{% endif %}
+    </div>
+    <div class="col-sm-12">
+        <strong>{% trans 'Lead Organization:' %}</strong>{% if language == 'fr' %}{{ doc.owner_org_fr }}{% else %}{{ doc.owner_org_en }}{% endif %}
+    </div>
+    <div class="col-sm-6">
+         <strong>{% trans 'Status: ' %}</strong> {% if language == 'fr' %}{{ doc.status_fr }}{% else %}{{ doc.status_en }}{% endif %}
+    </div>
+    <div class="col-sm-6 text-right">
+      {# Confirm the URL for this #}
+      <a href="https://open.canada.ca/en/commitment/comments-milestone-84" class="btn btn-sm btn-default">
+              <span class="fa fa-comment"></span> {% trans 'Comment' %}
+          </a>
+    </div>
+    <div class="col-sm-12">
+    <details class="mrgn-tp-md">
+      <summary>{% trans 'Progress Summary' %}</summary>
+      <p>
+        {% if language == 'fr' %}
+          {% if doc.progress_fr != '-' %}{{ doc.progress_fr | markdown_filter | safe }}<br>{% endif %}
+          {% if doc.evidence_fr != '-' %}{{ doc.evidence_fr | markdown_filter | safe }}<br>{% endif %}
+          {% if doc.challenge_fr != '-' %}{{ doc.challenges_fr | markdown_filter | safe }}{% endif %}
+        {% else %}
+          {% if doc.progress_en != '-' %}{{ doc.progress_en | markdown_filter | safe }}<br>{% endif %}
+          {% if doc.evidence_en != '-' %}{{ doc.evidence_en | markdown_filter | safe }}<br>{% endif %}
+          {% if doc.challenges_en != '-' %}{{ doc.challenges_en | markdown_filter | safe }}{% endif %}
+        {% endif %}
+      </p>
+    </details>
+    </div>
+</div>
