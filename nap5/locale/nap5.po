@@ -18,26 +18,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 
-msgid "Milestone:"
-msgstr "Jalon :"
-
-msgid "Commitment:"
-msgstr "Engagement :"
+msgid "National Action Plan on Open Government Commitment"
+msgstr "Plan d’action national du Canada pour un gouvernement ouvert"
 
 msgid "Lead Organization:"
 msgstr "Ministrère responsable :"
 
-msgid "Status:"
-msgstr "État :"
+msgid "Status: "
+msgstr "État : "
 
-msgid "Progress:"
-msgstr "Programme :"
+msgid "Program: "
+msgstr "Programme : "
 
-msgid "Evidence of progress:"
-msgstr "Preuve de progrès :"
+msgid "Progress: "
+msgstr "Progrés : "
 
-msgid "Challenges:"
-msgstr "Défis :"
+msgid "Evidence of progress: "
+msgstr "Preuve de progrès : "
+
+msgid "Challenges: "
+msgstr "Défis : "
 
 msgid "Reporting Period"
 msgstr "Période de déclaration"
@@ -45,14 +45,23 @@ msgstr "Période de déclaration"
 msgid "Milestone"
 msgstr "Jalon"
 
+msgid "Milestone: "
+msgstr "Jalon : "
+
 msgid "Commitment"
 msgstr "Engagement"
 
-msgid "Lead Organization"
-msgstr "Ministrère responsable"
+msgid "Commitment: "
+msgstr "Engagement : "
 
-msgid "Comment"
-msgstr "Commentaire"
+msgid "Lead Organization: "
+msgstr "Ministrère responsable : "
+
+msgid "Indicator: "
+msgstr "indicateur : "
+
+msgid "Updates"
+msgstr "Mises à jour"
 
 msgid "Progress Summary"
 msgstr "Résumé des progrès"
@@ -65,3 +74,9 @@ msgstr "Jalons"
 
 msgid "Due Date"
 msgstr "Date limite"
+
+msgid "Due Date: "
+msgstr "Date limite : "
+
+msgid "Summit for Democracy"
+msgstr "Sommet sur la démocratie"
