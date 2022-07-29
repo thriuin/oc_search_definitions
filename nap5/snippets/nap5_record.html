@@ -24,35 +24,36 @@
                         <dt><div class="col-sm-3"><strong>{% translate 'Commitment: ' %}</strong></div></dt>
                         <dd><div class="col-sm-9">{% if language == 'fr' %}{{ docs.0.commitments_fr }}{% else %}{{ docs.0.commitments_en }}{% endif %}</div></dd>
                     </div>
-                    <div class="row brdr-tp">
+                    <div class="row">
                         <dt><div class="col-sm-3"><strong>{% translate 'Milestone: ' %}</strong></div></dt>
                         <dd><div class="col-sm-9">
                             {% if language == 'fr' %}{{ docs.0.milestones_fra }}{% else %}{{ docs.0.milestones_eng }}{% endif %}
                         </div></dd>
                     </div>
-                    <div class="row brdr-tp">
+                    <div class="row">
                         <dt><div class="col-sm-3"><strong>{% translate 'Indicator: ' %}</strong></div></dt>
                         <dd><div class="col-sm-9">
                             {% if language == 'fr' %}{{ docs.0.indicators_fra }}{% else %}{{ docs.0.indicators_eng }}{% endif %}
                         </div></dd>
                     </div>
-                    <div class="row brdr-tp">
+                    <div class="row">
                         <dt><div class="col-sm-3"><strong>{% translate 'Lead Organization: ' %}</strong></div></dt>
                         <dd><div class="col-sm-9">
                             {% if language == 'fr' %}{{ docs.0.owner_org_fr }}{% else %}{{ docs.0.owner_org_en }}{% endif %}
                         </div></dd>
                     </div>
-                        <div class="row brdr-tp">
-                            <dt><div class="col-sm-3"><strong>{% translate 'Due Date: ' %}</strong></div></dt>
-                            <dd><div class="col-sm-5">
-                            {% if language == 'fr' %}{{ docs.0.due_date_fr }}{% else %}{{ docs.0.due_date_en }}{% endif %}
-                            </div>
-                            <div class="cols-sm-4">
-                                {% if doc.s4d == 'y' %}
-                                    <span class="label label-info">{% trans 'Summit for Democracy' %}</span>
-                                {% endif %}
-                            </div></dd>
-                        </div>
+                    <div class="row">
+                        <dt><div class="col-sm-3"><strong>{% translate 'Deadline: ' %}</strong></div></dt>
+                        <dd><div class="col-sm-9">
+                        {% if language == 'fr' %}{{ docs.0.deadline_fr }}{% else %}{{ docs.0.deadline_en }}{% endif %}
+                        </div></dd>
+                    </div>
+                    <div class="row">
+                      <dt><div class="col-sm-3"><strong>{% trans 'Summit for Democracy: ' %}</strong></div></dt>
+                      <dd><div class="col-sm-9">
+                        {% if language == 'fr' %}{{ docs.0.s4d_fr }}{% else %}{{ docs.0.s4d_en }}{% endif %}
+                      </div></dd>
+                    </div>
                 </dl>
             </div>
         </section>
@@ -63,30 +64,38 @@
          <div class="panel panel-default">
              <header class="panel-heading"><h5 class="panel-title">{{ doc.reporting_period }}</h5></header>
              <div class="panel-body">
-               <div class="col-sm-12">
-                 <strong>{% translate 'Status: ' %}</strong> {% if language == 'fr' %}{{ doc.status_fr }}{% else %}{{ doc.status_en }}{% endif %}
+               <div class="row">
+               <div class="col-sm-3"><strong>{% translate 'Status: ' %}</strong></div>
+               <div class="col-sm-9">
+                  <span class="label {% if doc.status == 'NS' %}label-danger{% elif doc.status == 'LP' %}label-warning{% elif doc.status == 'SP' %}label-info{% elif doc.status == 'C' %}label-success{% endif %}">{% if language == 'fr' %}{{ doc.status_fr }}{% else %}{{ doc.status_en }}{% endif %}</span>
+               </div>
                </div>
                {% if doc.progress_en != '-' and doc.progress_fr != '-' %}
+               <div class="row">
                <div class="col-sm-12">
-                <strong>{% translate 'Progress: ' %}</strong>
+                <strong>{% trans 'Evidence of progress: ' %}</strong>
                 <div>
                     {% if language == 'fr' %}{{ doc.progress_fr | markdown_filter | normalize_headings | safe }}
                     {% else %}
                     {{ doc.progress_en | markdown_filter | normalize_headings | safe}}{% endif %}
                 </div>
                 </div>
+                 </div>
                {% endif %}
                {% if doc.evidence_en != '-' and doc.evidence_fr != '-' %}
+               <div class="row">
                <div class="col-sm-12">
-                <strong>{% trans 'Evidence of progress: ' %}</strong>
+                <strong>{% trans 'Evidence: ' %}</strong>
                 <div>
                     {% if language == 'fr' %}{{ doc.evidence_fr | markdown_filter | normalize_headings | safe }}
                     {% else %}
                     {{ doc.evidence_en | markdown_filter | normalize_headings | safe}}{% endif %}
                 </div>
                 </div>
+               </div>
                {% endif %}
                {% if doc.challenges_en != '-' and doc.challenges_fr != '-' %}
+               <div class="row">
                <div class="col-sm-12">
                 <strong>{% trans 'Challenges: ' %}</strong>
                 <div>
@@ -95,6 +104,7 @@
                     {{ doc.challenges_en | markdown_filter | normalize_headings | safe}}{% endif %}
                 </div>
                 </div>
+               </div>
                {% endif %}
              </div>
          </div>

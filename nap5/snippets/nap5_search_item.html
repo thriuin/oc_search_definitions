@@ -23,13 +23,15 @@
         <strong>{% translate 'Lead Organization:' %}</strong>{% if language == 'fr' %}{{ doc.owner_org_fr }}{% else %}{{ doc.owner_org_en }}{% endif %}
     </div>
     <div class="col-sm-12">
-        <strong>{% translate 'Due Date: ' %}</strong>{% if language == 'fr' %}{{ doc.due_date_fr }}{% else %}{{ doc.due_date_en }}{% endif %}
+        <strong>{% translate 'Deadline: ' %}</strong>{% if language == 'fr' %}{{ doc.deadline_fr }}{% else %}{{ doc.deadline_en }}{% endif %}
     </div>
     <div class="col-sm-8">
-         <strong>{% translate 'Status: ' %}</strong> {% if language == 'fr' %}{{ doc.status_fr }}{% else %}{{ doc.status_en }}{% endif %}
+         <strong>{% translate 'Status: ' %}</strong>
+      <span class="label {% if doc.status == 'NS' %}label-danger{% elif doc.status == 'LP' %}label-warning{% elif doc.status == 'SP' %}label-info{% elif doc.status == 'C' %}label-success{% endif %}">
+      {% if language == 'fr' %}{{ doc.status_fr }}{% else %}{{ doc.status_en }}{% endif %}</span>
     </div>
     <div class="col-sm-4 text-right">{% if doc.s4d == 'y' %}
-        <span class="label label-info">{% translate 'Summit for Democracy' %}</span>{% endif %}
+        <span class="label label-primary">{% translate 'Summit for Democracy' %}</span>{% endif %}
     </div>
 
 </div>

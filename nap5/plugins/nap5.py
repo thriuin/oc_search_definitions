@@ -79,6 +79,8 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
         else:
             solr_record['due_date_en'] = solr_record['due_date']
             solr_record['due_date_fr'] = solr_record['due_date']
+        solr_record['deadline_en'] = codes['indicators'][indicator].extra_04_en
+        solr_record['deadline_fr'] = codes['indicators'][indicator].extra_04_fr
     return solr_record
 
 # Version 1.1 Methods
@@ -95,6 +97,12 @@ def pre_render_search(context: dict, template: str, request: HttpRequest, lang: 
     :param codes: the application code objects to be used
     :return: context object, and the template name
     """
+    # If there is no search text and no facets, then hide the results message
+    context['show_all_results'] = True
+    for p in request.GET:
+        if p not in ['encoding', 'page']:
+            context['show_all_results'] = False
+            break
     return context, template
 
 def pre_render_record(context: dict, template: str, request: HttpRequest, lang: str, search: Search, fields: dict, codes: dict):

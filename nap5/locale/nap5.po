@@ -80,3 +80,9 @@ msgstr "Date limite : "
 
 msgid "Summit for Democracy"
 msgstr "Sommet sur la démocratie"
+
+msgid "Summit for Democracy: "
+msgstr "Sommet sur la démocratie : "
+
+msgid "Deadline: "
+msgstr "Date d'échéance"
