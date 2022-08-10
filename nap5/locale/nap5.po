@@ -86,3 +86,6 @@ msgstr "Sommet sur la démocratie : "
 
 msgid "Deadline: "
 msgstr "Date d'échéance"
+
+msgid "Found %(result_num)s update%(result_s)"
+msgstr "Mise%(result_s) à jour %(result_num) trouvé%(result_s)"

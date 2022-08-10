@@ -3,17 +3,32 @@ from search.models import Search, Field, Code
 from SolrClient import SolrResponse
 
 
+# --custom method
+
+def circle_progress_bar_offset(value: int, total: int):
+    if value == 0:
+        return 360
+    else:
+        return 360 - round(value * 360 / total)
+
+
 def plugin_api_version():
     return 1.1
 
 
 def pre_search_solr_query(context: dict, solr_query: dict, request: HttpRequest, search: Search, fields: dict, codes: dict, facets: list, record_ids: str):
+
     solr_query['group'] = True
     solr_query['group.field'] = 'indicators'
     solr_query['group.limit'] = 1
-    solr_query['group.sort'] = 'reporting_period desc'
+    solr_query['group.sort'] = 'reporting_period_no desc'
     solr_query['group.facet'] = True
     solr_query['group.main'] = True
+    solr_query['group.truncate'] = True
+    #solr_query['fq'].insert(0, "{!collapse field=indicators max=reporting_period_no size=1}")
+    #solr_query['fq'].append("{!collapse field=indicators}")
+    #solr_query['expand'] = False
+
     return context, solr_query
 
 
@@ -81,6 +96,7 @@ def load_csv_record(csv_record: dict, solr_record: dict, search: Search, fields:
             solr_record['due_date_fr'] = solr_record['due_date']
         solr_record['deadline_en'] = codes['indicators'][indicator].extra_04_en
         solr_record['deadline_fr'] = codes['indicators'][indicator].extra_04_fr
+        solr_record['reporting_period_no'] = int(csv_record['reporting_period'][0:4] + csv_record['reporting_period'][5:7])
     return solr_record
 
 # Version 1.1 Methods
@@ -100,9 +116,18 @@ def pre_render_search(context: dict, template: str, request: HttpRequest, lang: 
     # If there is no search text and no facets, then hide the results message
     context['show_all_results'] = True
     for p in request.GET:
-        if p not in ['encoding', 'page']:
+        if p not in ['encoding', 'page', 'sort']:
             context['show_all_results'] = False
             break
+    # Do some calculations for the circle progress bars on the search page
+
+    # @TODO Need to calculate the numbers based on last status update for the commitment
+
+    context['c_offset'] = circle_progress_bar_offset(context['facets']['status']['C'], context['total_hits'])
+    context['sp_offset'] = circle_progress_bar_offset(context['facets']['status']['SP'], context['total_hits'])
+    context['lp_offset'] = circle_progress_bar_offset(context['facets']['status']['LP'], context['total_hits'])
+    context['ns_offset'] = circle_progress_bar_offset(context['facets']['status']['NS'], context['total_hits'])
+
     return context, template
 
 def pre_render_record(context: dict, template: str, request: HttpRequest, lang: str, search: Search, fields: dict, codes: dict):
