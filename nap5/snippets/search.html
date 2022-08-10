@@ -4,19 +4,77 @@
 {% load i18n %}
 {% load search_extras %}
 
+{% block main-content-body-top %}
+  <style>
+    @keyframes kf_c {
+      from {stroke-dashoffset: 360} to {stroke-dashoffset: {{c_offset}};}
+    }
+    @keyframes kf_sp {
+      from {stroke-dashoffset: 360} to {stroke-dashoffset: {{sp_offset}};}
+    }
+    @keyframes kf_lp {
+      from {stroke-dashoffset: 360} to {stroke-dashoffset: {{lp_offset}};}
+    }
+    @keyframes kf_ns {
+      from {stroke-dashoffset: 360} to {stroke-dashoffset: {{ns_offset}};}
+    }
+  </style>
+  <div class="row">
+    <div class="col-md-8 col-md-push-2 mrgn-tp-sm">
+    <div class="row mrgn-bttm-md mrgn-lft-md form-inline">
+      <div class="col-md-3">
+        <svg>
+          <circle class="bg-C" cx="57" cy="57" r="52" />
+          <circle class="meter-C" cx="57" cy="57" r="52" stroke-dashoffset="{{ c_offset }}" style="animation: kf_c 1s ease-out"/>
+          <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ facets.status|get_dict_value:'C' }}</text>
+        </svg>
+        <div class="text-center">{{ codes.status|get_dict_value:'C' }}</div>
+      </div>
+
+      <div class="col-md-3">
+        <svg>
+          <circle class="bg-SP" cx="57" cy="57" r="52" />
+          <circle class="meter-SP" cx="57" cy="57" r="52" stroke-dashoffset="{{ sp_offset }}" style="animation: kf_sp .8s ease-out"/>
+          <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ facets.status|get_dict_value:'SP' }}</text>
+        </svg>
+        <div class="text-center">{{ codes.status|get_dict_value:'SP' }}</div>
+      </div>
+
+        <div class="col-md-3">
+        <svg>
+          <circle class="bg-LP" cx="57" cy="57" r="52" />
+          <circle class="meter-LP" cx="57" cy="57" r="52" stroke-dashoffset="{{ lp_offset }}" style="animation: kf_lp .6s ease-out"/>
+          <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ facets.status|get_dict_value:'LP' }}</text>
+        </svg>
+        <div class="text-center">{{ codes.status|get_dict_value:'LP' }}</div>
+      </div>
+
+        <div class="col-md-3">
+        <svg>
+          <circle class="bg-NS" cx="57" cy="57" r="52" />
+          <circle class="meter-NS" cx="57" cy="57" r="52" stroke-dashoffset="{{ ns_offset }}" style="animation: kf_ns .4s ease-out"/>
+          <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ facets.status|get_dict_value:'NS' }}</text>
+        </svg>
+        <div class="text-center">{{ codes.status|get_dict_value:'NS' }}</div>
+      </div>
+    </div>
+      </div>
+  </div>
+{% endblock main-content-body-top %}
 
 {% block search_results_message %}
 {% if not show_all_results %}
 <div class="row mrgn-rght-lg">
     <div class="col-md-12">
-    <p><b>{% blocktrans with result_num=total_hits|apnumber result_s=total_hits|pluralize %}Found {{result_num}} update{{result_s}}{% endblocktrans %}</b></p>
+    <p><b>{% blocktrans with result_num=total_hits|apnumber result_s=total_hits|pluralize %}Found {{result_num}} commitment{{result_s}}{% endblocktrans %}</b></p>
     </div>
 </div>
 {% endif %}
 {% endblock search_results_message %}
 
+
 {% block main-centre-search-box %}
-<div class="col-md-12 mrgn-bttm-xl mrgn-tp-xl mrgn-lft-md form-inline">
+<div class="col-md-12 mrgn-bttm-md mrgn-tp-xs mrgn-lft-md form-inline">
 
     <div style="display: flex">
       <label class="control-label mrgn-rght-md" for="sort"> {% translate "Order By" %}</label>
@@ -41,57 +99,6 @@
 
 
 {% block main-content-search-items %}
-<style>
-  @keyframes kf_c {
-    from {stroke-dashoffset: 360} to {stroke-dashoffset: {{c_offset}};}
-  }
-  @keyframes kf_sp {
-    from {stroke-dashoffset: 360} to {stroke-dashoffset: {{sp_offset}};}
-  }
-  @keyframes kf_lp {
-    from {stroke-dashoffset: 360} to {stroke-dashoffset: {{lp_offset}};}
-  }
-  @keyframes kf_ns {
-    from {stroke-dashoffset: 360} to {stroke-dashoffset: {{ns_offset}};}
-  }
-</style>
-<div class="row mrgn-bttm-lg mrgn-tp-sm mrgn-lft-md form-inline">
-  <div class="col-md-3">
-    <svg>
-      <circle class="bg-C" cx="57" cy="57" r="52" />
-      <circle class="meter-C" cx="57" cy="57" r="52" stroke-dashoffset="{{ c_offset }}" style="animation: kf_c 1s ease-out"/>
-      <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ facets.status|get_dict_value:'C' }}</text>
-    </svg>
-    <div class="text-center">{{ codes.status|get_dict_value:'C' }}</div>
-  </div>
-
-  <div class="col-md-3">
-    <svg>
-      <circle class="bg-SP" cx="57" cy="57" r="52" />
-      <circle class="meter-SP" cx="57" cy="57" r="52" stroke-dashoffset="{{ sp_offset }}" style="animation: kf_sp .8s ease-out"/>
-      <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ facets.status|get_dict_value:'SP' }}</text>
-    </svg>
-    <div class="text-center">{{ codes.status|get_dict_value:'SP' }}</div>
-  </div>
-
-    <div class="col-md-3">
-    <svg>
-      <circle class="bg-LP" cx="57" cy="57" r="52" />
-      <circle class="meter-LP" cx="57" cy="57" r="52" stroke-dashoffset="{{ lp_offset }}" style="animation: kf_lp .6s ease-out"/>
-      <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ facets.status|get_dict_value:'LP' }}</text>
-    </svg>
-    <div class="text-center">{{ codes.status|get_dict_value:'LP' }}</div>
-  </div>
-
-    <div class="col-md-3">
-    <svg>
-      <circle class="bg-NS" cx="57" cy="57" r="52" />
-      <circle class="meter-NS" cx="57" cy="57" r="52" stroke-dashoffset="{{ ns_offset }}" style="animation: kf_ns .4s ease-out"/>
-      <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ facets.status|get_dict_value:'NS' }}</text>
-    </svg>
-    <div class="text-center">{{ codes.status|get_dict_value:'NS' }}</div>
-  </div>
-</div>
 {% for doc in docs %}
     {% include search_item_snippet %}
 {% endfor %}

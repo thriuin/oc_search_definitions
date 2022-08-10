@@ -29,6 +29,8 @@ def pre_search_solr_query(context: dict, solr_query: dict, request: HttpRequest,
     #solr_query['fq'].append("{!collapse field=indicators}")
     #solr_query['expand'] = False
 
+    solr_query['q'] = f'{solr_query["q"]} AND (is_latest:"T")'
+
     return context, solr_query
 
 
