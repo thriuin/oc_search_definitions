@@ -121,14 +121,45 @@ def pre_render_search(context: dict, template: str, request: HttpRequest, lang: 
         if p not in ['encoding', 'page', 'sort']:
             context['show_all_results'] = False
             break
-    # Do some calculations for the circle progress bars on the search page
+    # @TODO Do some calculations for the circle progress bars on the search page for more accurate rendering
 
-    # @TODO Need to calculate the numbers based on last status update for the commitment
-
-    context['c_offset'] = circle_progress_bar_offset(context['facets']['status']['C'], context['total_hits'])
-    context['sp_offset'] = circle_progress_bar_offset(context['facets']['status']['SP'], context['total_hits'])
-    context['lp_offset'] = circle_progress_bar_offset(context['facets']['status']['LP'], context['total_hits'])
-    context['ns_offset'] = circle_progress_bar_offset(context['facets']['status']['NS'], context['total_hits'])
+    # The graph at the top or the search page uses non-standard facet counts - when the status facets are selected,
+    # the unselected values are automatically set to zero. It is simpler to calculate these numbers here instead of
+    # in the template
+    if 'status' in request.GET:
+        statii = request.GET.getlist('status')
+        stati = statii[0].split('|')
+        context['c_offset'] = circle_progress_bar_offset(context['facets']['status']['C'], context['total_hits']) if "C" in stati else 360
+        context['sp_offset'] = circle_progress_bar_offset(context['facets']['status']['SP'], context['total_hits']) if "SP" in stati else 360
+        context['lp_offset'] = circle_progress_bar_offset(context['facets']['status']['LP'], context['total_hits']) if "LP" in stati else 360
+        context['ns_offset'] = circle_progress_bar_offset(context['facets']['status']['NS'], context['total_hits']) if "NS" in stati else 360
+        context['c_num'] = context['facets']['status']['C'] if "C" in stati else 0
+        context['sp_num'] = context['facets']['status']['SP'] if "SP" in stati else 0
+        context['lp_num'] = context['facets']['status']['LP'] if "LP" in stati else 0
+        context['ns_num'] = context['facets']['status']['NS'] if "NS" in stati else 0
+        for s in ['C', 'SP', 'LP', 'NS']:
+            stati2 = stati.copy()
+            if s in stati:
+                stati2.remove(s)
+            else:
+                # We do not want to show any links when clicking on the status would result in no change or zero results
+                if context['facets']['status'][s] > 0:
+                    stati2.append(s)
+                elif stati == stati2:
+                    stati2 = ()
+            context[s + "_list"] = "|".join(stati2)
+    else:
+        context['c_offset'] = circle_progress_bar_offset(context['facets']['status']['C'], context['total_hits'])
+        context['sp_offset'] = circle_progress_bar_offset(context['facets']['status']['SP'], context['total_hits'])
+        context['lp_offset'] = circle_progress_bar_offset(context['facets']['status']['LP'], context['total_hits'])
+        context['ns_offset'] = circle_progress_bar_offset(context['facets']['status']['NS'], context['total_hits'])
+        context['c_num'] = context['facets']['status']['C']
+        context['sp_num'] = context['facets']['status']['SP']
+        context['lp_num'] = context['facets']['status']['LP']
+        context['ns_num'] = context['facets']['status']['NS']
+        for s in ['C', 'SP', 'LP', 'NS']:
+            if context['facets']['status'][s] > 0:
+                context[s + "_list"] = s
 
     return context, template
 

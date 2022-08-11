@@ -2,6 +2,7 @@
 {% load static %}
 {% load humanize %}
 {% load i18n %}
+{% load qurl %}
 {% load search_extras %}
 
 {% block main-content-body-top %}
@@ -23,39 +24,47 @@
     <div class="col-md-8 col-md-push-2 mrgn-tp-sm">
     <div class="row mrgn-bttm-md mrgn-lft-md form-inline">
       <div class="col-md-3">
+        {% if C_list %}<a href="{% qurl request.get_full_path status=C_list %}">{% endif %}
         <svg>
           <circle class="bg-C" cx="57" cy="57" r="52" />
           <circle class="meter-C" cx="57" cy="57" r="52" stroke-dashoffset="{{ c_offset }}" style="animation: kf_c 1s ease-out"/>
-          <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ facets.status|get_dict_value:'C' }}</text>
+          <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ c_num }}</text>
         </svg>
         <div class="text-center">{{ codes.status|get_dict_value:'C' }}</div>
+        {% if C_list %}</a>{% endif %}
       </div>
 
       <div class="col-md-3">
+        {% if SP_list %}<a href="{% qurl request.get_full_path status=SP_list %}">{% endif %}
         <svg>
           <circle class="bg-SP" cx="57" cy="57" r="52" />
           <circle class="meter-SP" cx="57" cy="57" r="52" stroke-dashoffset="{{ sp_offset }}" style="animation: kf_sp .8s ease-out"/>
-          <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ facets.status|get_dict_value:'SP' }}</text>
+          <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ sp_num }}</text>
         </svg>
         <div class="text-center">{{ codes.status|get_dict_value:'SP' }}</div>
+        {% if SP_list %}</a>{% endif %}
       </div>
 
-        <div class="col-md-3">
+      <div class="col-md-3">
+        {% if LP_list %}<a href="{% qurl request.get_full_path status=LP_list %}">{% endif %}
         <svg>
           <circle class="bg-LP" cx="57" cy="57" r="52" />
           <circle class="meter-LP" cx="57" cy="57" r="52" stroke-dashoffset="{{ lp_offset }}" style="animation: kf_lp .6s ease-out"/>
-          <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ facets.status|get_dict_value:'LP' }}</text>
+          <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ lp_num }}</text>
         </svg>
         <div class="text-center">{{ codes.status|get_dict_value:'LP' }}</div>
+        {% if LP_list %}</a>{% endif %}
       </div>
 
-        <div class="col-md-3">
+      <div class="col-md-3">
+        {% if NS_list %}<a href="{% qurl request.get_full_path status=NS_list %}">{% endif %}
         <svg>
           <circle class="bg-NS" cx="57" cy="57" r="52" />
           <circle class="meter-NS" cx="57" cy="57" r="52" stroke-dashoffset="{{ ns_offset }}" style="animation: kf_ns .4s ease-out"/>
-          <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ facets.status|get_dict_value:'NS' }}</text>
+          <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ ns_num }}</text>
         </svg>
         <div class="text-center">{{ codes.status|get_dict_value:'NS' }}</div>
+        {% if NS_list %}</a>{% endif %}
       </div>
     </div>
       </div>
