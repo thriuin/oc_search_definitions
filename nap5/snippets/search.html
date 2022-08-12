@@ -24,9 +24,9 @@
     <div class="col-md-8 col-md-push-2 mrgn-tp-sm">
     <div class="row mrgn-bttm-md mrgn-lft-md form-inline">
       <div class="col-md-3">
-        {% if C_list %}<a href="{% qurl request.get_full_path status=C_list %}" title="{{ codes.status|get_dict_value:'C' }}" alt="{% blocktrans with com_count=c_num count_s=c_num|pluralize status=codes.status|get_dict_value:'C' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}">{% endif %}
+        {% if C_list %}<a href="{% qurl request.get_full_path status=C_list %}" title="{{ codes.status|get_dict_value:'C' }}" alt="{{ c_num }} {% translate "committment" %}{{ c_num|pluralize }} {% translate "with status" %} {{ codes.status|get_dict_value:'C' }}">{% endif %}
         <svg aria-labelledby="cStatTitle" role="img">
-          <title id="cStatTitle">{% blocktrans with com_count=c_num count_s=c_num|pluralize status=codes.status|get_dict_value:'C' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}</title>
+          <title id="cStatTitle">{{ c_num }} {% translate "commitment" %}{{ c_num|pluralize }} {% translate "with status" %} {{ codes.status|get_dict_value:'C' }}</title>
           <circle class="bg-C" cx="57" cy="57" r="52" />
           <circle class="meter-C" cx="57" cy="57" r="52" stroke-dashoffset="{{ c_offset }}" style="animation: kf_c 1s ease-out"/>
           <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ c_num }}</text>
@@ -36,9 +36,9 @@
       </div>
 
       <div class="col-md-3">
-        {% if SP_list %}<a href="{% qurl request.get_full_path status=SP_list %}" title="{{ codes.status|get_dict_value:'SP' }}" alt="{% blocktrans with com_count=sp_num count_s=sp_num|pluralize status=codes.status|get_dict_value:'SP' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}">{% endif %}
+        {% if SP_list %}<a href="{% qurl request.get_full_path status=SP_list %}" title="{{ codes.status|get_dict_value:'SP' }}" alt="{{ sp_num }} {% translate "commitment" %}{{ sp_num|pluralize }} {% translate "with status" %} {{ codes.status|get_dict_value:'SP' }}">{% endif %}
         <svg aria-labelledby="spStatTitle" role="img">
-          <title id="spStatTitle">{% blocktrans with com_count=sp_num count_s=sp_num|pluralize status=codes.status|get_dict_value:'SP' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}</title>
+          <title id="spStatTitle">{{ sp_num }} {% translate "commitment" %}{{ sp_num|pluralize }} {% translate "with status" %} {{ codes.status|get_dict_value:'SP' }}</title>
           <circle class="bg-SP" cx="57" cy="57" r="52" />
           <circle class="meter-SP" cx="57" cy="57" r="52" stroke-dashoffset="{{ sp_offset }}" style="animation: kf_sp .8s ease-out"/>
           <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ sp_num }}</text>
@@ -48,9 +48,9 @@
       </div>
 
       <div class="col-md-3">
-        {% if LP_list %}<a href="{% qurl request.get_full_path status=LP_list %}" title="{{ codes.status|get_dict_value:'LP' }}" alt="{% blocktrans with com_count=lp_num count_s=lp_num|pluralize status=codes.status|get_dict_value:'LP' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}">{% endif %}
+        {% if LP_list %}<a href="{% qurl request.get_full_path status=LP_list %}" title="{{ codes.status|get_dict_value:'LP' }}" alt="{{ lp_num }} {% translate "commitment" %}{{ lp_num|pluralize }} {% translate "with status" %} {{ codes.status|get_dict_value:'LP' }}">{% endif %}
         <svg aria-labelledby="lpStatTitle" role="img">
-          <title id="lpStatTitle">{% blocktrans with com_count=lp_num count_s=lp_num|pluralize status=codes.status|get_dict_value:'LP' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}</title>
+          <title id="lpStatTitle">{{ lp_num }} {% translate "commitment" %}{{ lp_num|pluralize }} {% translate "with status" %} {{ codes.status|get_dict_value:'LP' }}</title>
           <circle class="bg-LP" cx="57" cy="57" r="52" />
           <circle class="meter-LP" cx="57" cy="57" r="52" stroke-dashoffset="{{ lp_offset }}" style="animation: kf_lp .6s ease-out"/>
           <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ lp_num }}</text>
@@ -60,9 +60,9 @@
       </div>
 
       <div class="col-md-3">
-        {% if NS_list %}<a href="{% qurl request.get_full_path status=NS_list %}" title="{{ codes.status|get_dict_value:'NS' }}" alt="{% blocktrans with com_count=ns_num count_s=ns_num|pluralize status=codes.status|get_dict_value:'NS' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}">{% endif %}
+        {% if NS_list %}<a href="{% qurl request.get_full_path status=NS_list %}" title="{{ ns_num }} {% translate "commitment" %}{{ ns_num|pluralize }} {% translate "with status" %} {{ codes.status|get_dict_value:'NS' }}">{% endif %}
         <svg aria-labelledby="nsStatTitle" role="img">
-          <title id="nsStatTitle">{% blocktrans with com_count=ns_num count_s=ns_num|pluralize status=codes.status|get_dict_value:'NS' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}</title>
+          <title id="nsStatTitle">{{ ns_num }} {% translate "commitment" %}{{ ns_num|pluralize }} {% translate "with status" %} {{ codes.status|get_dict_value:'NS' }}</title>
           <circle class="bg-NS" cx="57" cy="57" r="52" />
           <circle class="meter-NS" cx="57" cy="57" r="52" stroke-dashoffset="{{ ns_offset }}" style="animation: kf_ns .4s ease-out"/>
           <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ ns_num }}</text>
@@ -79,7 +79,8 @@
 {% if not show_all_results %}
 <div class="row mrgn-rght-lg">
     <div class="col-md-12">
-    <p><b>{% blocktrans with result_num=total_hits|apnumber result_s=total_hits|pluralize %}Found {{result_num}} commitment{{result_s}}{% endblocktrans %}</b></p>
+    <p><b>{% if LANGUAGE_CODE == 'fr' %}{{ total_hits|apnumber }} engagement{{ total_hits|pluralize }} trouvé{{ total_hits|pluralize }}
+      {% else %}Found {{ total_hits|apnumber }} commitment{{ total_hits|pluralize }}{% endif %}</b></p>
     </div>
 </div>
 {% endif %}
