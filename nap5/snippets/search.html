@@ -24,8 +24,9 @@
     <div class="col-md-8 col-md-push-2 mrgn-tp-sm">
     <div class="row mrgn-bttm-md mrgn-lft-md form-inline">
       <div class="col-md-3">
-        {% if C_list %}<a href="{% qurl request.get_full_path status=C_list %}">{% endif %}
-        <svg>
+        {% if C_list %}<a href="{% qurl request.get_full_path status=C_list %}" title="{{ codes.status|get_dict_value:'C' }}" alt="{% blocktrans with com_count=c_num count_s=c_num|pluralize status=codes.status|get_dict_value:'C' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}">{% endif %}
+        <svg aria-labelledby="cStatTitle" role="img">
+          <title id="cStatTitle">{% blocktrans with com_count=c_num count_s=c_num|pluralize status=codes.status|get_dict_value:'C' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}</title>
           <circle class="bg-C" cx="57" cy="57" r="52" />
           <circle class="meter-C" cx="57" cy="57" r="52" stroke-dashoffset="{{ c_offset }}" style="animation: kf_c 1s ease-out"/>
           <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ c_num }}</text>
@@ -35,8 +36,9 @@
       </div>
 
       <div class="col-md-3">
-        {% if SP_list %}<a href="{% qurl request.get_full_path status=SP_list %}">{% endif %}
-        <svg>
+        {% if SP_list %}<a href="{% qurl request.get_full_path status=SP_list %}" title="{{ codes.status|get_dict_value:'SP' }}" alt="{% blocktrans with com_count=sp_num count_s=sp_num|pluralize status=codes.status|get_dict_value:'SP' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}">{% endif %}
+        <svg aria-labelledby="spStatTitle" role="img">
+          <title id="spStatTitle">{% blocktrans with com_count=sp_num count_s=sp_num|pluralize status=codes.status|get_dict_value:'SP' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}</title>
           <circle class="bg-SP" cx="57" cy="57" r="52" />
           <circle class="meter-SP" cx="57" cy="57" r="52" stroke-dashoffset="{{ sp_offset }}" style="animation: kf_sp .8s ease-out"/>
           <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ sp_num }}</text>
@@ -46,8 +48,9 @@
       </div>
 
       <div class="col-md-3">
-        {% if LP_list %}<a href="{% qurl request.get_full_path status=LP_list %}">{% endif %}
-        <svg>
+        {% if LP_list %}<a href="{% qurl request.get_full_path status=LP_list %}" title="{{ codes.status|get_dict_value:'LP' }}" alt="{% blocktrans with com_count=lp_num count_s=lp_num|pluralize status=codes.status|get_dict_value:'LP' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}">{% endif %}
+        <svg aria-labelledby="lpStatTitle" role="img">
+          <title id="lpStatTitle">{% blocktrans with com_count=lp_num count_s=lp_num|pluralize status=codes.status|get_dict_value:'LP' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}</title>
           <circle class="bg-LP" cx="57" cy="57" r="52" />
           <circle class="meter-LP" cx="57" cy="57" r="52" stroke-dashoffset="{{ lp_offset }}" style="animation: kf_lp .6s ease-out"/>
           <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ lp_num }}</text>
@@ -57,8 +60,9 @@
       </div>
 
       <div class="col-md-3">
-        {% if NS_list %}<a href="{% qurl request.get_full_path status=NS_list %}">{% endif %}
-        <svg>
+        {% if NS_list %}<a href="{% qurl request.get_full_path status=NS_list %}" title="{{ codes.status|get_dict_value:'NS' }}" alt="{% blocktrans with com_count=ns_num count_s=ns_num|pluralize status=codes.status|get_dict_value:'NS' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}">{% endif %}
+        <svg aria-labelledby="nsStatTitle" role="img">
+          <title id="nsStatTitle">{% blocktrans with com_count=ns_num count_s=ns_num|pluralize status=codes.status|get_dict_value:'NS' %}{{com_count}} commitment{{count_s}} with status {{status}}{% endblocktrans %}</title>
           <circle class="bg-NS" cx="57" cy="57" r="52" />
           <circle class="meter-NS" cx="57" cy="57" r="52" stroke-dashoffset="{{ ns_offset }}" style="animation: kf_ns .4s ease-out"/>
           <text x="57" y="64" text-anchor="middle" class="status_count_text">{{ ns_num }}</text>
