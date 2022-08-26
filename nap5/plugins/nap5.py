@@ -171,17 +171,19 @@ def pre_render_search(context: dict, template: str, request: HttpRequest, lang: 
                         stati2 = ()
                 context[s + "_list"] = "|".join(stati2)
         else:
-            context['c_offset'] = circle_progress_bar_offset(context['facets']['status']['C'], context['total_hits'])
-            context['sp_offset'] = circle_progress_bar_offset(context['facets']['status']['SP'], context['total_hits'])
-            context['lp_offset'] = circle_progress_bar_offset(context['facets']['status']['LP'], context['total_hits'])
-            context['ns_offset'] = circle_progress_bar_offset(context['facets']['status']['NS'], context['total_hits'])
-            context['c_num'] = context['facets']['status']['C']
-            context['sp_num'] = context['facets']['status']['SP']
-            context['lp_num'] = context['facets']['status']['LP']
-            context['ns_num'] = context['facets']['status']['NS']
+            context['c_offset'] = circle_progress_bar_offset(context['facets']['status']['C'], context['total_hits']) if "C" in context['facets']['status'] else 360
+            context['sp_offset'] = circle_progress_bar_offset(context['facets']['status']['SP'], context['total_hits']) if "SP" in context['facets']['status'] else 360
+            context['lp_offset'] = circle_progress_bar_offset(context['facets']['status']['LP'], context['total_hits']) if "LP" in context['facets']['status'] else 360
+            context['ns_offset'] = circle_progress_bar_offset(context['facets']['status']['NS'], context['total_hits']) if "NS" in context['facets']['status'] else 360
+            context['c_num'] = context['facets']['status']['C'] if "C" in context['facets']['status'] else 0
+            context['sp_num'] = context['facets']['status']['SP'] if "SP" in context['facets']['status'] else 0
+            context['lp_num'] = context['facets']['status']['LP'] if "LP" in context['facets']['status'] else 0
+            context['ns_num'] = context['facets']['status']['NS'] if "NS" in context['facets']['status'] else 0
             for s in ['C', 'SP', 'LP', 'NS']:
-                if context['facets']['status'][s] > 0:
+                if s in context['facets']['status'] and context['facets']['status'][s] > 0:
                     context[s + "_list"] = s
+                else:
+                    context[s + "_list"] = ()
 
     return context, template
 
