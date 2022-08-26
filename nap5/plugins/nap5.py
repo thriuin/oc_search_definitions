@@ -165,7 +165,7 @@ def pre_render_search(context: dict, template: str, request: HttpRequest, lang: 
                     stati2.remove(s)
                 else:
                     # We do not want to show any links when clicking on the status would result in no change or zero results
-                    if context['facets']['status'][s] > 0:
+                    if s in context['facets']['status'] and context['facets']['status'][s] > 0:
                         stati2.append(s)
                     elif stati == stati2:
                         stati2 = ()
